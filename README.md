@@ -1,14 +1,12 @@
 # Biblioteca de Videojuegos [C++] 🎮👾
+
 > ### Tecnólogo en Informática - Facultad de Ingeniería UDELAR
 > ### Tarea Obligatoria de Programación Avanzada - Tercer Semestre.
-
-> 
-
 
 ## Detalles
 
 - ### Programación Orientada a Objetos
-- ### Lenguaje: C++
+- ### Lenguaje C++
 
 #### Participantes: 
 
