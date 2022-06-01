@@ -22,3 +22,5 @@
 - Matutino
 
 ---
+
+[![FING Logo](https://www.fing.edu.uy/sites/default/files/inline-images/logofing.png)](https://www.fing.edu.uy/sites/default/files/inline-images/logofing.png)
