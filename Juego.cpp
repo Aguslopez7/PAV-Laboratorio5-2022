@@ -1,21 +1,17 @@
 #include "Juego.h"
-#include "Sistema.h"
 #include "Partida.h"
-#include "DtPartida.h"
 #include "partidaIndividual.h"
 #include "partidaMultijugador.h"
-#include "DtPartidaIndividual.h"
-#include "DtPartidaMultijugador.h"
 
 using namespace std;
 
 Juego::Juego(){}
 
-Juego::Juego(string nombre, string descripcion, int puntaje, int totalPartidas){
+Juego::Juego(string nombre, string descripcion,int puntaje,int totalHoras, Usuario* usuario, DtCategoria* categoria){
     this->nombre=nombre;
     this->descripcion=descripcion;
     this->puntaje=puntaje;
-    this->totalPartidas=totalPartidas;
+    this->totalHoras=totalHoras;
 }
 
 void Juego::setNombre(string nombre){
@@ -29,47 +25,41 @@ void Juego::setDescripcion(string descripcion){
 void Juego::setPuntaje(int puntaje){
     this->puntaje=puntaje;
 }
-
-void Juego::setTotalPartidas(int totalPartidas){
-    this->totalPartidas=totalPartidas;
+void Juego::setTotalHoras(int totalHoras){
+    this->totalHoras=totalHoras;
 }
 
-int Juego::getTotalPartidas(){
-    return this->totalPartidas;
+void Juego::setUsuario(Usuario* usuario){
+    this->usuario=usuario;
 }
 
-string Juego::getDescripcion(){
-    return this->descripcion;
+void Juego::setCategoria(DtCategoria* categoria){
+    this->categoria=categoria;
+}
+
+DtCategoria* Juego::getCategoria(){
+    return this->categoria;
+}
+
+Usuario* Juego::getUsuario(){
+    return this->usuario;
 }
 
 int Juego::getPuntaje(){
     return this->puntaje;
+}
+int Juego::getTotalHoras(){
+    return this->totalHoras;
+} 
+
+string Juego::getDescripcion(){
+    return this->descripcion;
 }
 
 string Juego::getNombre(){
     return this->nombre;
 }
 
-int Juego:: getTopePartidaVJ(){
-    return this->topePartidaVJ;
-}
-
-/*DtJuego* Juego::getDtVideoJuego(){
-    int totalHorasDeJuego=0;
-    for(int i=0; i< this->topePartidaVJ; i++)
-        totalHorasDeJuego = totalHorasDeJuego + this->partidas[i]->darTotalHorasParticipantes();
-    DtJuego *dt = new DtJuego(this->genero, this->nombre, totalHorasDeJuego);
-    return dt;
-}*/
-
-void Juego::addPartida(Partida* p){
-    this->partidas[this->topePartidaVJ]=p;
-    this->topePartidaVJ++;
-}
-
-Partida** Juego::getPartida(int& cantPartidas){
-    cantPartidas = this->topePartidaVJ;
-    return this->partidas;
-}
+//agregarSuscripcion(Suscripcion)
 
 Juego::~Juego(){}

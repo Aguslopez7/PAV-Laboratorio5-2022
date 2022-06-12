@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include "Definiciones.h"
-#include "TipoGenero.h"
 #include "DtJuego.h"
 #include "Partida.h"
+#include "Usuario.h"
+#include "Categoria.h"
+
 
 using namespace std;
 
@@ -13,25 +15,25 @@ class Juego{
     private:
         string nombre;
         string descripcion;
-        int puntaje;            // Calcular puntaje promedio
-        int totalPartidas;      // Calcular total horas juegos
-        int topePartidaVJ = 0;
-        Partida* partidas[MAX_PARTIDAS]; 
+        int costo;
+        Usuario* usuario;
+        DtCategoria* categoria;
+        DtJuego* juego;
     public:
         Juego();
-        Juego(string nombre, string descripcion, int puntaje, int totalPartidas);
+        Juego(string nombre, string descripcion,int costo, Usuario* usuario, DtCategoria* categoria);
         void setNombre(string nombre);
         void setDescripcion(string descripcion);
-        void setPuntaje(int puntaje);
-        void setTotalPartidas(int totalPartidas);
+        void setCosto(int costo);
+        void setUsuario(Usuario* usuario);
+        void setCategoria(DtCategoria* categoria);
+        void setJuego(DtJuego* juego);
         string getNombre();
         string getDescripcion();
-        int getPuntaje();
-        int getTotalPartidas();
-        int getTopePartidaVJ();
-        DtJuego* getDtVideoJuego();
-        Partida** getPartida(int& cantidadPartidas);
-        void addPartida(Partida* p);    // Se debe aplicar un Manejador
+        int getCosto();
+        Usuario* getUsuario();
+        DtCategoria* getCategoria();   
+        DtJuego* getJuego();     
         ~Juego();
 };
 

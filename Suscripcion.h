@@ -2,23 +2,31 @@
 #define SUSCRIPCION
 
 #include <iostream>
-#include <string>
 #include "Suscripcion.h"
 #include "DtFechaHora.h"
-using namespace std;
+#include "TipoPago.h"
+#include "Usuario.h"
+
 
 class Suscripcion{
     private:
-        string tipoPago;
-        DtFechaHora* fecha;
+    TipoPago tipo;
+    int costo;
+    DtFechaHora* fecha;
+    Usuario* usuario;
+
     public:
-        Suscripcion();
-        Suscripcion(string tipoPago,DtFechaHora* fechaHora);
-        void setTipoPago(string tipoPago);
-        string getTipoPago();
-        void setFecha(DtFechaHora* fecha);
-        DtFechaHora* getFecha();
-        ~Suscripcion();
+    Suscripcion();
+    Suscripcion(TipoPago tipo,int costo,DtFechaHora* fecha, Usuario* usuario);
+    void setTipoPago(TipoPago tipo);
+    void setCosto(int costo);
+    void setFecha(DtFechaHora* fecha);
+    void setUsuario(Usuario* usuario);
+    TipoPago getTipoPago();
+    int getCosto();
+    DtFechaHora* getFecha();
+    Usuario* getUsuario();
+    ~Suscripcion();
 };
 
 #endif

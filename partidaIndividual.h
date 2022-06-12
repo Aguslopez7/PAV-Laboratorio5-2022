@@ -2,7 +2,6 @@
 #define PARTIDAINVIDIUAL
 
 #include "Partida.h"
-#include "DtPartidaIndividual.h"
 
 class PartidaIndividual : public Partida{
   private:

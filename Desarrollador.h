@@ -14,7 +14,6 @@ class Desarrollador : public Usuario{
         Desarrollador(string email, string password, string nombreEmpresa);
         void setNombreEmpresa(string nombreEempresa);
         string getNombreEmpresa();
-        /*DtJugador *getDtJugador();*/
         ~Desarrollador();
 };
 
