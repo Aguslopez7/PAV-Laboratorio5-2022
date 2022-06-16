@@ -2,17 +2,27 @@
 
 Suscripcion::Suscripcion(){}
 
-Suscripcion::Suscripcion(string tipoPago,DtFechaHora* fecha){
-    this->tipoPago=tipoPago;
+Suscripcion::Suscripcion(TipoPago tipo,int costo,DtFechaHora* fecha, Usuario* usuario){
+    this->tipo=tipo;
+    this->costo=costo;
     this->fecha=fecha;
+    this->usuario=usuario;
 }
 
-void Suscripcion:: setTipoPago(string tipoPago){
-    this->tipoPago=tipoPago;
+void Suscripcion:: setTipoPago(TipoPago tipo){
+    this->tipo=tipo;
 }
 
-string Suscripcion:: getTipoPago(){
-    return this->tipoPago;
+TipoPago Suscripcion:: getTipoPago(){
+    return this->tipo;
+}
+
+void Suscripcion:: setCosto(int costo){
+    this->costo=costo;
+}
+
+int Suscripcion:: getCosto(){
+    return this->costo;
 }
 
 void Suscripcion:: setFecha(DtFechaHora* fecha){
@@ -23,9 +33,12 @@ DtFechaHora* Suscripcion:: getFecha(){
     return this->fecha;
 }
 
-/*DtDesarrollador *Desarrollador:: getDtDesarrollador(){
-    DtDesarrollador *dt = new DtDesarrollador(this->edad, this->nickname);
-    return dt;
-}*/
+void Suscripcion:: setUsuario(Usuario* usuario){
+    this->usuario=usuario;
+}
+
+Usuario* Suscripcion:: getUsuario(){
+    return this->usuario;
+}
 
 Suscripcion::~Suscripcion(){}

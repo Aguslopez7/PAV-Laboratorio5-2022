@@ -2,11 +2,12 @@
 #define JUGADOR
 
 #include <iostream>
-#include "DtJugador.h"
 #include "Definiciones.h"
 #include "Usuario.h"
+//#include "DtJugador.h"
 
 using namespace std;
+
 class Jugador : public Usuario{
     private:
         string nickname, descripcion;

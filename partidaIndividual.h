@@ -2,7 +2,8 @@
 #define PARTIDAINVIDIUAL
 
 #include "Partida.h"
-#include "DtPartidaIndividual.h"
+
+using namespace std;
 
 class PartidaIndividual : public Partida{
   private:

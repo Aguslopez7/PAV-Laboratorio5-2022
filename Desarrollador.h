@@ -6,6 +6,7 @@
 #include "Usuario.h"
 
 using namespace std;
+
 class Desarrollador : public Usuario{
     private:
         string nombreEmpresa;
@@ -14,7 +15,6 @@ class Desarrollador : public Usuario{
         Desarrollador(string email, string password, string nombreEmpresa);
         void setNombreEmpresa(string nombreEempresa);
         string getNombreEmpresa();
-        /*DtJugador *getDtJugador();*/
         ~Desarrollador();
 };
 

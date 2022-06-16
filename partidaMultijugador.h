@@ -3,6 +3,8 @@
 
 #include "Partida.h"
 
+using namespace std;
+
 class PartidaMultijugador : public Partida{
   private:
     bool trasmitidaEnVivo;

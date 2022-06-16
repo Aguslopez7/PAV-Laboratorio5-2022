@@ -3,10 +3,10 @@
 
 #include <string>
 #include <iostream>
-#include "DtPartida.h"
 #include "Definiciones.h"
 #include "DtFechaHora.h"
 #include "Jugador.h"
+//#include "DtPartida.h"
 
 using namespace std;
 

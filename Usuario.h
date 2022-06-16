@@ -12,6 +12,7 @@ class Usuario{
   private:
     string email;
     string password;
+
   public:
     Usuario();
     Usuario(string email, string password);
@@ -19,8 +20,7 @@ class Usuario{
     void setPassword(string password);
     string getEmail();
     string getPassword();
-    ~Usuario();
-    /*virtual =0;*/
+    virtual ~Usuario() = 0;
 };
 
 #endif
