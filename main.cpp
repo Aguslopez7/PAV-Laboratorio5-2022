@@ -9,10 +9,7 @@
 #include "Juego.h"
 #include "Jugador.h"
 #include "TipoPago.h"
-<<<<<<< HEAD
 #include "Sesion.h"
-=======
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 using namespace std;
 
@@ -27,10 +24,7 @@ Fabrica* fabrica;
 ICAgregarCategoria* icAgregarCategoria;
 ICIniciarSesion* icIniciarSesion;
 ICCerrarSesion* icCerrarSesion;
-<<<<<<< HEAD
 ICInfoJuego* icInfoJuego;
-=======
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 ICAltaUsuario* icAltaUsuario;
 ICIniciarPartida* icIniciarPartida;
 ICAgregarVideojuego* icAgregarVideojuego;
@@ -40,18 +34,11 @@ ICSuscribirseaVideojuego* icSuscribirseaVideojuego;
 
 void cargarFabrica()
 {
-<<<<<<< HEAD
     fabrica = Fabrica::getInstancia();
     icAgregarCategoria = fabrica->getICAgregarCategoria();
     icIniciarSesion = fabrica->getICIniciarSesion();
     icCerrarSesion = fabrica->getICCerrarSesion();
     icInfoJuego = fabrica->getICInfoJuego();
-=======
-	fabrica = Fabrica::getInstancia();
-	icAgregarCategoria = fabrica->getICAgregarCategoria();
-    icIniciarSesion = fabrica->getICIniciarSesion();
-	icCerrarSesion = fabrica->getICCerrarSesion();
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     icAltaUsuario = fabrica->getICAltaUsuario();
     icIniciarPartida = fabrica->getICIniciarPartida();
     icAgregarVideojuego = fabrica->getICAgregarVideojuego();
@@ -299,12 +286,8 @@ void initialization()
 
 /********** Menu Tipo de Partida **********/
 
-<<<<<<< HEAD
 void menuTipoDePartida()
 {
-=======
-void menuTipoDePartida() {
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     cout << longTab << "┌────────────────────────────────────────────┐" << endl;
     cout << longTab << "│         Selecciona Tipo de Partida         │" << endl;
     cout << longTab << "├────────────────────────────────────────────┤\n";
@@ -321,12 +304,8 @@ void menuTipoDePartida() {
     cout << longTab << "❯ Opción: ";
 }
 
-<<<<<<< HEAD
 void menuCargarPartida(string msg)
 {
-=======
-void menuCargarPartida(string msg) {
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     system("clear");
     progress = 0.25;
     cout << longSpace << longTab << COLOR_P << "┌────────────────────────────────────────────┐" << endl;
@@ -377,7 +356,6 @@ void menuCargarPartida(string msg) {
 }
 
 /***************************************************
-<<<<<<< HEAD
  *                                                  *
  *              Operaciones Principales             *
  *                                                  *
@@ -390,19 +368,6 @@ void menuCargarPartida(string msg) {
 void menuCargarDatos()
 {
     // sistema->cargarDatosPredeterminados();
-=======
-*                                                  *
-*              Operaciones Principales             *
-*                                                  *
-***************************************************/
-
-/*-------------------------------------------------*
-*                 Menu Agregar Datos               *
-*--------------------------------------------------*/
-
-void menuCargarDatos() {
-    //sistema->cargarDatosPredeterminados();
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     system("clear");
     progress = 0.25;
     cout << longSpace << longTab << COLOR_P << "┌────────────────────────────────────────────┐" << endl;
@@ -451,7 +416,6 @@ void menuCargarDatos() {
 }
 
 /*---------------------------------------------------*
-<<<<<<< HEAD
  *                 Menu Alta Usuario                  *
  *----------------------------------------------------*/
 
@@ -653,180 +617,6 @@ void menuAgregarCategoria()
     string genero, plataforma;
     cout << "♦ Estas son las categorias existentes: " << endl;
     icAgregarCategoria->listarDtCategorias();
-=======
-*                 Menu Alta Usuario                  *
-*----------------------------------------------------*/
-
-void menuAltaUsuario() { 
-    system("clear");
-    cout << longSpace << longTab << "╔════════════════════════════════════════════╗\n";
-    cout << longTab << COLOR_SB << "║           ♦ 👤 Agregar Usuario ♦           ║" << COLOR_RESET << endl;
-    cout << longTab << "╚════════════════════════════════════════════╝\n";
-    string email, pass;
-    int num, num2;
-    cout<< longTab << "♦ Ingrese su Email:"<<endl;
-    cin >> email;
-    cout<< longTab << "♦ Ingrese su Password:"<<endl;
-    cin >> pass;
-    icAltaUsuario->datosComunes(email, pass);
-    cout<< longTab << "♦ Ingrese 1 si eres Desarrollador o 2 si eres Jugador:"<<endl;
-    cin >> num;
-    bool cond=true;
-    
-    switch(num){ 
-        case 1:{
-            string nomEmp;
-            cout<< longTab << "♦ Ingrese el nombre de la empresa:"<<endl;
-            cin >> nomEmp;
-            icAltaUsuario->datosEmpresa(nomEmp);
-            try {
-                icAltaUsuario->altaUsuario();
-                cout<<"♦ El usuario fue agregado con exito!!"<<endl;
-            } catch (invalid_argument& e) {
-                cout << "\n"<< longTab << COLOR_Y << "┌─────────────────────────────────────────┐" << endl;
-                cout << longTab << e.what() << endl;
-                cout << longTab << "└─────────────────────────────────────────┘" << COLOR_RESET << endl;
-                system("sleep 2");
-            } 
-        }
-        break;
-        case 2:{
-            string nick, desc;
-            cout<< longTab << "♦ Ingrese nickname:"<<endl;
-            cin >> nick;
-            cout<< longTab << "♦ Ingrese una breve descripcion:"<<endl;
-            cin >> desc;
-            icAltaUsuario->datosJugador(nick, desc);
-            do{
-                try {
-                    icAltaUsuario->altaUsuario();
-                    cout<<"♦ El usuario fue agregado con exito!!"<<endl;
-                    cond=false;
-                } catch (invalid_argument& e) {
-                    cout << "\n"<< longTab << COLOR_Y << "┌─────────────────────────────────────────┐" << endl;
-                    cout << longTab << e.what() << endl;
-                    cout << longTab << "└─────────────────────────────────────────┘" << COLOR_RESET << endl;
-                    system("sleep 1");
-                    cout << longTab << "┌────────────────────────────────────────────┐" << endl;
-                    cout << longTab << "│   ¿Deseas volver a ingresar el nickname?   │" << endl;
-                    cout << longTab << "├────────────────────────────────────────────┤\n";
-                    cout << longTab << "│                                            │\n";
-                    cout << longTab << "│                                            │\n";
-                    cout << longTab << "│               1. 🔁 REINTENTAR             │\n";
-                    cout << longTab << "│                                            │\n";
-                    cout << longTab << "│               2. ❌ CANCELAR               │\n";
-                    cout << longTab << "│                                            │\n"; //✅✅🔁
-                    cout << longTab << "│                                            │\n";
-                    cout << longTab << "└────────────────────────────────────────────┘" << endl;
-                    cout << longTab << "❯ Opción: ";
-                    cin >> num2;
-                    switch (num2){
-                        case 1:
-                            cout<< longTab << "♦ Ingrese nickname:"<<endl;
-                            cin >> nick;
-                            icAltaUsuario->ingNickname(nick);
-                        break;
-                        case 2:
-                            icAltaUsuario->cancelar();
-                            cond=false;
-                        break;
-                    }
-                }
-            }while(cond);
-        }
-        break;
-    }
-    
-}
-
-/*------------------------------------------------------*
-*                 Menu Iniciar Sesion                   *
-*-------------------------------------------------------*/
-
-/*void menuIniciarSesion() {
-    bool cond=true;
-    do{
-        system("clear");
-        cout << longSpace << longTab << "╔════════════════════════════════════════════╗\n";
-        cout << longTab << COLOR_SB << "║           ♦ 👤 Iniciar Sesion ♦            ║" << COLOR_RESET << endl;
-        cout << longTab << "╚════════════════════════════════════════════╝\n";
-        string email, pass;
-        cout<< longTab << "♦ Ingrese su Email:"<<endl;
-        cin >> email;
-        cout<< longTab << "♦ Ingrese su Password:"<<endl;
-        cin >> pass;
-        if(icIniciarSesion->ingresarDatos(email, pass)){
-            cout<< "♦ Se inicio sesion correctamente"
-            cond=false;
-        }else{
-            cout<< "♦ No se pudo crear la sesion correctamente."
-        }
-    }while()
-   
-}*/
-
-
-void menuIniciarSesion() {
-    system("clear");
-    int cond;
-    cout << longSpace << longTab << "╔═════════════════════════════════════════════╗\n";
-    cout << longTab << COLOR_SB << "║              ♦ 👤 Bienvenido ♦              ║" << COLOR_RESET << endl;
-    cout << longTab << "╚═════════════════════════════════════════════╝\n";
-    cout<< longTab << "║              ♦ Desea (1)niciar sesion o (2)egistrarse? ♦              ║"<<endl;
-    cin >> cond;
-    switch (cond){
-        case 1:{
-
-            string email, pass;
-            cout<< longTab << "♦ Ingrese su Email:"<<endl;
-            cin >> email;
-            cout<< longTab << "♦ Ingrese su Password:"<<endl;
-            cin >> pass;
-            if(icIniciarSesion->ingresarDatos(email, pass)){
-                cout<< "♦ Se inicio sesion correctamente!";
-            }else{
-                cout<< "♦ No se pudo crear la sesion correctamente.";
-            }
-        }
-        break;
-        case 2:{
-            menuAltaUsuario();
-        }
-        break;
-    }  
-}
-
-/*-----------------------------------------------------*
-*               Menu Cerrar Sesion                     *
-*------------------------------------------------------*/
-
-void menuCerrarSesion() {
-    system("clear");
-    cout << "♦ Esta seguro que desea Cerrar Sesion?" << endl;
-    cout << "♦ 1/0" << endl;
-    int cond;
-    cin >> cond;
-    switch (cond){
-        case 1:{
-            icCerrarSesion->cerrarSesion();
-            cout << "♦ Se cerro correctamente la sesion." << endl;
-            cout << "♦ Saludos." << endl;
-        }
-        break;
-    }
-}
-
-/*-------------------------------------------------------*
-*               Menu Agregar Categoria                   *
-*--------------------------------------------------------*/
-
-void menuAgregarCategoria() {
-    system("clear");
-    int id, cond;
-    string genero, plataforma;
-    cout << "♦ Estas son las categorias existentes: " << endl;
-    icAgregarCategoria->listCategorias();
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     cout << "♦ Ingrese los nuevos datos de la categoria que desea agregar: " << endl;
     cout << "♦ Ingrese su id: " << endl;
     cin >> id;
@@ -838,7 +628,6 @@ void menuAgregarCategoria() {
     cout << "♦ Desea confirmar esta nueva categoria? " << endl;
     cout << "♦ 1/0" << endl;
     cin >> cond;
-<<<<<<< HEAD
     switch (cond)
     {
     case 1:
@@ -852,23 +641,10 @@ void menuAgregarCategoria() {
         icAgregarCategoria->cancelar();
     }
     break;
-=======
-    switch (cond){
-        case 1:{
-            icAgregarCategoria->confirmarCategoria();
-            cout << "♦ Se agrego correctamente la nueva categoria." << endl;
-        }
-        break;
-        case 0:{
-            icAgregarCategoria->cancelar();
-        }
-        break;
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     }
 }
 
 /*---------------------------------------------------*
-<<<<<<< HEAD
  *               Menu Agregar Videojuego              *
  *----------------------------------------------------*/
 
@@ -877,16 +653,6 @@ void menuAgregarVideojuego()
     system("clear");
     int costo, cond, x;
     string nombre, desc, genero, plataforma;
-=======
-*               Menu Agregar Videojuego              *
-*----------------------------------------------------*/
-
-void menuAgregarVideojuego() {
-    system("clear");
-    int costo, cond;
-    string nombre, desc;
-    DtCategoria* categorias;
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     cout << "♦ Ingrese el nombre del videojuego: " << endl;
     cin >> nombre;
     cout << "♦ Ingrese la descripcion del videojuego: " << endl;
@@ -894,7 +660,6 @@ void menuAgregarVideojuego() {
     cout << "♦ Ingrese el costo de la suscripcion: " << endl;
     cin >> costo;
     cout << "♦ Categorias: " << endl;
-<<<<<<< HEAD
     icAgregarCategoria->listarDtCategorias();
     DtCategoria *nuevoDt;
     do
@@ -931,37 +696,12 @@ void menuAgregarVideojuego() {
         icAgregarVideojuego->cancelar();
     }
     break;
-=======
-    icAgregarCategoria->listCategorias();
-    //agrega las categorias
-    //se muestra toda la info del juego + el mail del desarrollador
-    cout << "♦ Desea confirmar este videojuego? " << endl;
-    cout << "♦ 1/0" << endl;
-    cin >> cond;
-    switch (cond){
-        case 1:{
-            icAgregarVideojuego->solicitarInfo(nombre, desc, costo,categorias);
-            icAgregarVideojuego->confirmarJuego();
-            cout << "♦ Se agrego correctamente el videojuego." << endl;
-        }
-        break;
-        case 0:{
-            icAgregarVideojuego->cancelar();
-        }
-        break;
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     }
-    
 }
 
 /*---------------------------------------------------*
-<<<<<<< HEAD
  *               Menu Iniciar Partida                 *
  *----------------------------------------------------*/
-=======
-*               Menu Iniciar Partida                 *
-*----------------------------------------------------*/
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 void menuIniciarPartida()
 {
@@ -1036,71 +776,6 @@ void menuIniciarPartida()
 void menuSuscribirseAVideojuego()
 {
     system("clear");
-<<<<<<< HEAD
-=======
-    int cond;
-    string  nom;
-    bool cont=false;
-    int cond2, dur, jug;
-    icIniciarPartida->listarVideoJuegosSuscripcionActiva();
-    cout << "♦ Ingrese el nombre del juego que desea jugar: " << endl;
-    cin >> nom;
-    icIniciarPartida->seleccionarVideojuego(nom);
-    cout << "♦ La partida sera (1)ultijugador o (0)ndividual ?" << endl;
-    cin >> cond;
-    switch (cond){
-        case 1:{
-            cout << "♦ La partida sera trasmitida en vivo?" << endl;
-            cout << "♦ Ingrese 1 en el caso de serlo: " << endl;
-            cin >> cond2;
-            if (cond2==1){
-                cont=true;
-            }
-            cout << "♦ Ingrese la duracion: " << endl;
-            cin >> dur;
-            cout << "♦ Ingrese la cantidad de jugadores: " << endl;
-            cin >> jug;
-            icIniciarPartida->datoMultijugador(cont, dur, jug);
-        }
-        break;
-        case 0:{
-            cout << "♦ La partida es una continuacion de alguna anterior?" << endl;
-            cout << "♦ Ingrese 1 en el caso de serlo: " << endl;
-            cin >> cond2;
-            if (cond2==1){
-                cont=true;
-            }
-            cout << "♦ Ingrese la duracion: " << endl;
-            cin >> dur;
-            icIniciarPartida->datoIndividual(cont, dur);
-        }
-        break;
-    }
-    cout << "♦ Desea confirmar y poder empezar con su partida?" << endl;
-    cout << "♦ 1/0" << endl;
-    cin >> cond;
-    switch (cond){
-        case 1:{
-            icIniciarPartida->altaPartida();
-            cout << "♦ Se creo correctamente la partida." << endl;
-        }
-        break;
-        case 0:{
-            icIniciarPartida->cancelar();
-            cout << "♦ Se cancelo con exito la creacion de la partida." << endl;
-        }
-        break;
-    }
-
-}
-
-/*---------------------------------------------------*
-*            Menu Suscribirse a Videojuego           *
-*----------------------------------------------------*/
-
-void menuSuscribirseAVideojuego(){
-    system("clear");
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     cout << "╔════════════════════════════════════════════╗\n";
     cout << COLOR_SB << "║           ♦ 🎯 Suscribirse ♦          ║" << COLOR_RESET << endl;
     cout << "╚════════════════════════════════════════════╝\n";
@@ -1108,7 +783,6 @@ void menuSuscribirseAVideojuego(){
     de suscripción de cada videojuego del sistema, mostrando en listas
     separadas aquellos para los cuales el jugador tiene actualmente una
     suscripción activa y por otro lado el resto*/
-<<<<<<< HEAD
     DtFechaHora *fh = new DtFechaHora(10, 6, 2022, 20, 51);
     string nombre;
     TipoPago tipoPago;
@@ -1168,54 +842,6 @@ void menuEliminarVideojuego()
 /*------------------------------------------*
  *                 Exit Screen               *
  *-------------------------------------------*/
-=======
-    DtFechaHora* fh = new DtFechaHora(10,6,2022,20,51);
-    string nombre;
-    TipoPago tipoPago;
-    int tipo=0, x=0, costo=50;
-    cout << "♦ Nombre del VideoJuego: ";
-    cin>> nombre;
-    //Si el jugador ya tiene una sub para ese juego 
-    cout << "⛔ Ya tiene una suscripcion activa para este juego";
-    //si no tiene una sub:
-    cout << "Ingrese 1 para pagar con Debito o 2 para Credito: ";
-    cin>> tipo;
-    if(tipoPago==1){
-        tipoPago=DEBITO;
-    }else if(tipoPago==2){
-        tipoPago=CREDITO;
-    }
-    cout << "Ingrese 1 para confirmar o 2 para cancelar: ";
-    cin>> x;
-    /*if(x==1){
-    Suscripcion(tipoPago,costo,fh,Usuario);
-    }
-    */
-
-}
-
-/*---------------------------------------------------*
-*            Menu Ver Info de Videojuego             *
-*----------------------------------------------------*/
-
-void menuVerInfoVideojuego() {
-    system("clear");
-    
-}
-
-/*---------------------------------------------------*
-*               Menu Eliminar Videojuego             *
-*----------------------------------------------------*/
-
-void menuEliminarVideojuego() {
-    system("clear");
-    
-}
-
-/*------------------------------------------*
-*                 Exit Screen               *
-*-------------------------------------------*/
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 void exit()
 {
@@ -1260,12 +886,8 @@ void statusBar()
 
 /********** Menu Principal (Consola) **********/
 
-<<<<<<< HEAD
 void menuPlayer()
 {
-=======
-void menuPlayer() {
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     system("clear");
     statusBar();
     cout << longTab << "╔══════════════════════════════════════════════╗" << endl;
@@ -1303,12 +925,8 @@ void menuPlayer() {
     cout << longTab << "❯ Opción: ";
 }
 
-<<<<<<< HEAD
 void menuDev()
 {
-=======
-void menuDev() {
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     system("clear");
     statusBar();
     cout << longTab << "╔══════════════════════════════════════════════╗" << endl;
@@ -1346,7 +964,6 @@ void menuDev() {
 
 /********** Logica del Menu Principal **********/
 
-<<<<<<< HEAD
 int main()
 {
     cargarFabrica();
@@ -1428,105 +1045,5 @@ int main()
             break;
         }
     }while(opcion != 0);
-=======
-int main() {
-    cargarFabrica();
-    /*welcomeBanner();
-    menuDisplay();
-    initialization();
-    /*IniciarSesion(ingrese datos o registrarse)
-    si el loco inicia bien(casteo a usuario)
-    si entra al catch va menuDev()
-    si sigue try entra menuPlayer()
-    menuIniciarSesion();   
-    //Sesion* sesion = Sesion::getInstancia();
-    //Usuario* u = sesion->getUsuario();
-    //Desarrollador* uD= dynamic_cast<Desarrollador*> (u)
-   // if(uD!=NULL)
-
-    menuDev();
-    else{
-        Jugador* uJ= dynamic_cast<Jugador*>(u)
-        if(uJ!=NULL)
-            menuPlayer();
-    }
-
-    if (/*si entra al catch){
-        menuDev();
-    }
-    else{
-        menuPlayer();
-    }
-    */
-  
-    int opcion;
-    cin >> opcion;
-    while (opcion != 0){
-        bool data = true;
-        switch (opcion) {
-            case 1:
-                if (data) {
-                    menuCargarDatos();
-                    data = false;
-                } else {
-                    cout << "\n"
-                         << longTab << COLOR_Y << "┌────────────────────────────────────────────┐" << endl;
-                    cout << longTab << "│   🔔 Ya Has Cargado los Datos de Prueba!   │" << endl;
-                    cout << longTab << "└────────────────────────────────────────────┘" << COLOR_RESET << endl;
-                    system("sleep 2");
-                }
-            break;
-            case 2:
-                menuAltaUsuario();
-            break;
-            case 3:
-                menuIniciarSesion();
-            break;
-            case 4:
-                menuCerrarSesion();
-            break;
-            case 5:
-                menuAgregarCategoria();
-            break;
-            case 6:
-                menuAgregarVideojuego();
-            break;
-            case 7:
-                menuSuscribirseAVideojuego();
-            break;
-            case 8:
-                menuIniciarPartida();
-            break;
-            case 9:
-                //menuVerInformacionDeVideojuego();  
-            break;
-            case 10:
-                //menuEliminarVideojuego();
-            break;
-            case 11:
-                //menuAsignarPuntajeAVideojuego();
-            break;
-            case 12:
-                //menuCancelarSuscripcionAVideojuego();
-            break;
-            case 13:
-                //menuBuscarVideojuegoPorCategoria();
-            break;
-            case 14:
-                //menuRankingDeVideojuegos();
-            break;
-            case 15:
-                //menuVerPartidaDeUnVideojuego();
-            break;
-        }
-        //if (/*si entra al catch*/){
-        /*    menuDev();
-        }
-        else{
-            menuPlayer();
-        }
-        cin >> opcion;*/
-    }
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     exit();
 }

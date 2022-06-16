@@ -27,11 +27,7 @@ class CIniciarPartida : public ICIniciarPartida {
         int cantJugadores;
         list<Usuario*> suscritos;
     public:
-<<<<<<< HEAD
         //list<string> listarVideoJuegosSuscripcionActiva();
-=======
-        list<string> listarVideoJuegosSuscripcionActiva();
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
         bool tieneSuscripcionActiva(string nickname);
         void seleccionarVideojuego(string nombre);
         void datoIndividual(bool continuaPartidaAnterior, int duracion);

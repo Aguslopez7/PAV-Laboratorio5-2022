@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 
 
 // Incluir todos los Controladores
 #include "Fabrica.h"
-=======
-#include "Fabrica.h"
-
-// Incluir todos los Controladores
-
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 #include "CAgregarCategoria.h"
 #include "CAgregarVideojuego.h"
 #include "CAltaUsuario.h"
@@ -18,18 +11,11 @@
 #include "CSuscribirseaVideojuego.h"
 #include "CInfoJuego.h"
 
-<<<<<<< HEAD
 
 Fabrica* Fabrica::instancia = NULL;
 
 Fabrica::Fabrica() {}
 
-=======
-Fabrica::Fabrica() {}
-
-Fabrica* Fabrica::instancia = NULL;
-
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 Fabrica* Fabrica::getInstancia()
 {
 	if (instancia == NULL)
@@ -77,8 +63,4 @@ ICSuscribirseaVideojuego* Fabrica::getICSuscribirseaVideojuego()
 	return new CSuscribirseaVideojuego();
 }
 
-<<<<<<< HEAD
 Fabrica::~Fabrica(){}
-=======
-Fabrica::~Fabrica() {}
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e

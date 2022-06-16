@@ -12,10 +12,7 @@ list<string> CInfoJuego::listarJuegos(){
 
     return nombreJuegos;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 DtJuego* CInfoJuego::selectJuego(string nombre){
     this->nombre = nombre;
     ManejadorJuego* mc = ManejadorJuego::getInstancia();
