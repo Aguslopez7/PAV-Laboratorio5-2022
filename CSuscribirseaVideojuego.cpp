@@ -8,11 +8,16 @@ void CSuscribirseaVideojuego::SuscribirseAVideojuego(){
     Sesion* sesion = Sesion::getInstancia();
     Usuario* u = sesion->getUsuario();
     ManejadorJuego* manJue = ManejadorJuego::getInstancia();
+<<<<<<< HEAD
    //manJue->find(juego); //El jugador ingresa el nombre del juego
+=======
+   // manJue->find(juego); //El jugador ingresa el nombre del juego
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
    // Suscripcion* suscripcion=new Suscripcion(tipo,costo,fechaHora,u);// El jugador ingresa el tipo. La fecha es la del sistema
     //agregarSuscripcion(suscripcion);
     //add(suscripcion);
 }
+<<<<<<< HEAD
 
 
 /*list<string> CSuscribirseaVideojuego::tieneSuscripcion()
@@ -29,3 +34,5 @@ void CSuscribirseaVideojuego::SuscribirseAVideojuego(){
     return suscripcionActiva;
 }
 */
+=======
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e

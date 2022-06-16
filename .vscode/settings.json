@@ -46,6 +46,11 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
+<<<<<<< HEAD
         "typeinfo": "cpp"
+=======
+        "typeinfo": "cpp",
+        "compare": "cpp"
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
     }
 }

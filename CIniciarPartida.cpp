@@ -1,4 +1,8 @@
 #include "CIniciarPartida.h"
+<<<<<<< HEAD
+=======
+#include "ManejadorPartida.h"
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 #include "Sesion.h"
 #include "Usuario.h"
 
@@ -11,11 +15,18 @@
     return videoJuegosSuscripcionActiva;
 }*/
 
+<<<<<<< HEAD
 bool CIniciarPartida::tieneSuscripcionActiva(string nickname){ /*
     this->nickname=nickname;
     //return   */
     return true;
 }
+=======
+/*bool CIniciarPartida::tieneSuscripcionActiva(string nickname){ 
+    this->nickname=nickname;
+    //return   
+}*/
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 void CIniciarPartida::seleccionarVideojuego(string nombre){
     /*bool mon=jugador->tieneSuscripcionActiva(inicioClase->getCodigo());//ver
@@ -36,8 +47,11 @@ void CIniciarPartida::datoMultijugador(bool transmitidaEnVivo, int duracion, int
 
 void CIniciarPartida::altaPartida(){
     
+<<<<<<< HEAD
 }
 
 void CIniciarPartida::cancelar(){
     //se libera la memoria
+=======
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 }

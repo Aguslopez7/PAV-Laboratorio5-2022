@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 main: Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o partidaIndividual.o partidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o
 	g++ Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o partidaIndividual.o partidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o -g -o ejecutable
+=======
+main: Fabrica.o ManejadorCategoria.o ManejadorJuego.o ManejadorSesion.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o partidaIndividual.o partidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o
+	g++ Fabrica.o ManejadorCategoria.o ManejadorJuego.o ManejadorSesion.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o  CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o partidaIndividual.o partidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o -g -o ejecutable
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 run: main
 	./ejecutable
@@ -11,6 +16,7 @@ rundebug : debug
 main.o : main.cpp
 	g++ main.cpp -g -c
 
+<<<<<<< HEAD
 ############### Singleton ###############
 
 Fabrica.o : Fabrica.cpp
@@ -19,6 +25,11 @@ Fabrica.o : Fabrica.cpp
 Sesion.o : Sesion.cpp
 	g++ Sesion.cpp -g -c
 
+=======
+Fabrica.o : Fabrica.cpp
+	g++ Fabrica.cpp -g -c
+
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 ############### Manejadores ###############
 
 ManejadorCategoria.o : ManejadorCategoria.cpp
@@ -27,6 +38,15 @@ ManejadorCategoria.o : ManejadorCategoria.cpp
 ManejadorJuego.o : ManejadorJuego.cpp
 	g++ ManejadorJuego.cpp -g -c
 
+<<<<<<< HEAD
+=======
+#ManejadorPartida.o : ManejadorPartida.cpp
+#	g++ ManejadorPartida.cpp -g -c
+
+ManejadorSesion.o : ManejadorSesion.cpp
+	g++ ManejadorSesion.cpp -g -c
+
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 ManejadorUsuario.o : ManejadorUsuario.cpp
 	g++ ManejadorUsuario.cpp -g -c
 
@@ -44,8 +64,13 @@ CAltaUsuario.o : CAltaUsuario.cpp
 CCerrarSesion.o : CCerrarSesion.cpp
 	g++ CCerrarSesion.cpp -g -c
 
+<<<<<<< HEAD
 CInfoJuego.o : CInfoJuego.cpp
 	g++ CInfoJuego.cpp -g -c
+=======
+CInfoJuego.o : CCInfoJuego.cpp
+	g++ CCInfoJuego.cpp -g -c
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 CIniciarPartida.o : CIniciarPartida.cpp
 	g++ CIniciarPartida.cpp -g -c

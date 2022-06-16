@@ -1,5 +1,6 @@
 #include "CAgregarCategoria.h"
 #include "ManejadorCategoria.h"
+<<<<<<< HEAD
 
 
 list<DtCategoria*> CAgregarCategoria::listarDtCategorias(){
@@ -12,6 +13,13 @@ list<DtCategoria*> CAgregarCategoria::listarDtCategorias(){
 		dtCatList.push_back(dtC);
     }
     return dtCatList;
+=======
+#include "DtCategoria.h"
+
+list<DtCategoria*> CAgregarCategoria::listCategorias(){
+    ManejadorCategoria* mCat = ManejadorCategoria::getInstancia();
+    return mCat->listarCategorias();    
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 }
 
 void CAgregarCategoria::solictarDatos(int id, string genero, string plataforma){

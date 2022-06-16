@@ -1,7 +1,10 @@
 #include "CIniciarSesion.h"
 #include "ManejadorUsuario.h"
+<<<<<<< HEAD
 #include "Sesion.h"
 #include "Desarrollador.h"
+=======
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
 
 bool CIniciarSesion::ingresarDatos(string email, string password) {
     string pass;
@@ -19,6 +22,7 @@ bool CIniciarSesion::ingresarDatos(string email, string password) {
     } else
        login = false;
     return login;  
+<<<<<<< HEAD
 }
 
 bool CIniciarSesion::usuarioConectado() {
@@ -42,3 +46,8 @@ string CIniciarSesion::getEmail(){
 	Usuario* u = sesi->getUsuario();
 	return this->email;
 }
+=======
+
+}
+
+>>>>>>> b105ec8d5d80d53fcc2cdfb9363238e4f9eef99e
