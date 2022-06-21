@@ -20,10 +20,11 @@ class Categoria{
         void setDescripcion(string descripcion);
         void setTipoGenero(string tipoGenero);
         void setTipoPlataforma(string tipoPlataforma);
-        int getId();
         string getDescripcion();
         string getTipoGenero();
+        int getId();
         string getTipoPlataforma();
+        //static int getAutoId();
         DtCategoria* getDtCategoria();
         ~Categoria();
 };

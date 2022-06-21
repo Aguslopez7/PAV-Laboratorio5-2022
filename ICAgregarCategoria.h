@@ -10,8 +10,10 @@ using namespace std;
 class ICAgregarCategoria {
    public:
     virtual list<DtCategoria*> listarDtCategorias() = 0;
-    virtual void solictarDatos(int id, string genero, string plataforma) = 0;
+    virtual bool hayCategorias() = 0;
+    virtual void solictarDatos( string descripcion, string genero, string plataforma) = 0;
     virtual void confirmarCategoria() = 0;
+    virtual DtCategoria* buscarCat(int id) = 0;
     virtual void cancelar() = 0;
 };
 

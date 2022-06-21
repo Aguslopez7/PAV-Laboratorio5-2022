@@ -16,6 +16,7 @@ class CIniciarSesion : public ICIniciarSesion{
         string password;
     public:
         bool ingresarDatos(string email, string password);
+        bool signUp();
         bool usuarioConectado();
         string getEmail();
 };

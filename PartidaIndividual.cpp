@@ -1,4 +1,4 @@
-#include "partidaIndividual.h"
+#include "PartidaIndividual.h"
 
 PartidaIndividual::PartidaIndividual(){}
 

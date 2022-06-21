@@ -5,11 +5,14 @@
 #include <list>
 #include "Definiciones.h"
 #include "DtJuego.h"
+#include "DtCategoria.h"
 #include "Partida.h"
-#include "Usuario.h"
+#include "PartidaIndividual.h"
+#include "PartidaMultijugador.h"
+#include "Desarrollador.h"
 #include "Categoria.h"
+#include "Estadistica.h"
 #include "Suscripcion.h"
-
 
 using namespace std;
 
@@ -18,24 +21,27 @@ class Juego{
         string nombre;
         string descripcion;
         int costo;
-        Usuario* usuario;
+        Desarrollador* dev;
         list<DtCategoria*> categorias;
-        Suscripcion* sub;
-        DtJuego* juego;
+        list<Partida*> partidas;
+        list<Estadistica*> estadisticas;
+        list<Suscripcion*> sub;
     public:
         Juego();
-        Juego(string nombre, string descripcion,int costo, Usuario* usuario, list<DtCategoria*> categorias);
+        Juego(string nombre, string descripcion,int costo, Desarrollador* dev, list<DtCategoria*> categorias);
         void setNombre(string nombre);
         void setDescripcion(string descripcion);
         void setCosto(int costo);
-        void setUsuario(Usuario* usuario);
-        void setJuego(DtJuego* juego);
+        void setDesarrollador(Desarrollador* dev);
         string getNombre();
         string getDescripcion();
         int getCosto();
-        Usuario* getUsuario();
+        Desarrollador* getDesarrollador();
         list<DtCategoria*> getCategorias();   
-        DtJuego* getJuego();  
+        DtJuego* getDtVideojuego(); 
+        bool tengoSuscripcionJugador(Jugador* jugador);
+        void agregarSuscripcion(Suscripcion* suscripcion);
+        void agregarPartida(Partida* partida);
         ~Juego();
 };
 

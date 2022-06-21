@@ -1,4 +1,4 @@
-#include "partidaMultijugador.h"
+#include "PartidaMultijugador.h"
 
 PartidaMultijugador::PartidaMultijugador(){}
 

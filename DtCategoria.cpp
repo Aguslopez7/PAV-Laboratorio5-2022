@@ -1,18 +1,27 @@
 #include "DtCategoria.h"
 
-DtCategoria::DtCategoria(){}
 
-DtCategoria::DtCategoria(string genero, string tipoPlataforma){
-    this->tipoGenero;
-    this->tipoPlataforma;
+DtCategoria::DtCategoria(int id, string tipoGenero, string tipoPlataforma){
+    this->id=id;
+    this->tipoGenero=tipoGenero;
+    this->tipoPlataforma=tipoPlataforma;
 }
 
-void DtCategoria::setGenero(string genero){
+void DtCategoria::setId(int id){
+    this->id = id;
+}
+
+
+void DtCategoria::setGenero(string tipoGenero){
     this->tipoGenero = tipoGenero;
 }
 
 void DtCategoria::setPlataforma(string tipoPlataforma){
     this->tipoPlataforma = tipoPlataforma;
+}
+
+int DtCategoria::getId(){
+    return this->id;
 }
 
 string DtCategoria::getGenero(){

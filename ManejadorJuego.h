@@ -18,6 +18,7 @@ class ManejadorJuego{
         Juego* find(string juego);
         void add(Juego* juego);
         void erase(string juego);
+        bool exist(string nombre);
         virtual ~ManejadorJuego();
 };
 #endif

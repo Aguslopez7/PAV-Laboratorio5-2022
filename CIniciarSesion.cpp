@@ -8,7 +8,8 @@ bool CIniciarSesion::ingresarDatos(string email, string password) {
     bool login = false;
     bool exist;
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();  // creo instancia de manejador
-    if (exist = mU->existeUsuario(email)) {                   // busco si existe el usuario
+    exist = mU->existeUsuario(email);
+    if (exist) {                                              // busco si existe el usuario
         Usuario* u = mU->buscarUsuario(email);                // busco al usuario
         pass = u->getPassword();
         if (pass == password) {
@@ -16,29 +17,41 @@ bool CIniciarSesion::ingresarDatos(string email, string password) {
             sesion->setUsuario(u);
             login = true;
         }
-    } else
+    } else{
        login = false;
-    return login;  
+    }
+    return login;    
+}
+
+bool CIniciarSesion::signUp(){
+    bool retorno = true;
+    Sesion* sesion = Sesion::getInstancia();
+    Usuario* usuario = sesion->getUsuario();
+    if (usuario == NULL)    
+    {
+        retorno = false;
+        return retorno;
+    }else{
+        return retorno;
+    }
 }
 
 bool CIniciarSesion::usuarioConectado() {
 	bool owo = false;
     Sesion* sesion = Sesion::getInstancia();
     Usuario* usuario = sesion->getUsuario();
-	Desarrollador* dev = dynamic_cast<Desarrollador*> (usuario);
-	if (dev != NULL){
-		owo = true;
-		return owo;
-	}
-	else
-	{
-		owo = false;
-		return owo;
-	}
+    int tipo = usuario->getTipoUsuario();
+    if (tipo == 1){
+        owo = true;
+    }else if(tipo == 0){
+        owo = false;
+    }
+    return owo;
 }
 
 string CIniciarSesion::getEmail(){
 	Sesion* sesi = Sesion::getInstancia();
 	Usuario* u = sesi->getUsuario();
-	return this->email;
+    string email = u->getEmail();
+	return email;
 }

@@ -12,6 +12,7 @@ class ICAltaUsuario{
     virtual void datosJugador(string nickname, string descripcion) = 0;
     virtual void ingNickname(string nickname) = 0;
     virtual bool checkUser(string data) = 0;
+    virtual bool hayUsuarios() = 0;
     virtual void altaUsuario() = 0;
     virtual void cancelar() = 0;
 };

@@ -26,6 +26,11 @@ void ManejadorJuego::add(Juego* juego){
     this->colJuegos.insert(pair<string,Juego*>(juego->getNombre(),juego));
 }
 
+bool ManejadorJuego::exist(string nombre){ 
+  map<string,Juego*>::iterator it = this->colJuegos.find(nombre);
+  return (it != this->colJuegos.end());
+}
+
 void ManejadorJuego::erase(string juego){
   this->colJuegos.erase(juego);
 }

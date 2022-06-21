@@ -8,6 +8,7 @@ using namespace std;
 class ICIniciarSesion{
     public:
     virtual bool ingresarDatos(string email, string password) = 0;
+    virtual bool signUp() = 0;
     virtual bool usuarioConectado() = 0;
     virtual string getEmail()=0;
 };

@@ -10,8 +10,8 @@
 #include "Jugador.h"
 #include "Partida.h"
 #include "Usuario.h"
-#include "partidaIndividual.h"
-#include "partidaMultijugador.h"
+#include "PartidaIndividual.h"
+#include "PartidaMultijugador.h"
 
 using namespace std;
 
@@ -26,12 +26,11 @@ class CIniciarPartida : public ICIniciarPartida {
         int duracion;
         int cantJugadores;
         list<Usuario*> suscritos;
+        int tipo;
     public:
-        //list<string> listarVideoJuegosSuscripcionActiva();
-        bool tieneSuscripcionActiva(string nickname);
         void seleccionarVideojuego(string nombre);
-        void datoIndividual(bool continuaPartidaAnterior, int duracion);
-        void datoMultijugador(bool transmitidaEnVivo, int duracion, int cantJugadores);
+        void datoIndividual(bool continuaPartidaAnterior, int duracion, int tipo);
+        void datoMultijugador(bool transmitidaEnVivo, int duracion, int cantJugadores, int tipo);
         void altaPartida();
         void cancelar();
 };

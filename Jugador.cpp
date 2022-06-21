@@ -2,7 +2,7 @@
 
 Jugador::Jugador(){}
 
-Jugador::Jugador(string email, string password, string nickname, string descripcion) : Usuario(email,password){
+Jugador::Jugador(string email, string password, int tipoUsuario, string nickname, string descripcion) : Usuario(email,password,tipoUsuario){
     this->nickname=nickname;
     this->descripcion=descripcion;
 }

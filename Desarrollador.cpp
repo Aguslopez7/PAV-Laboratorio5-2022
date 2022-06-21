@@ -2,7 +2,7 @@
 
 Desarrollador::Desarrollador(){}
 
-Desarrollador::Desarrollador(string email, string password, string nombreEmpresa) : Usuario(email,password){
+Desarrollador::Desarrollador(string email, string password,int tipoUsuario, string nombreEmpresa) : Usuario(email,password,tipoUsuario){
     this->nombreEmpresa=nombreEmpresa;
 }
 
