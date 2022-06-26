@@ -22,13 +22,13 @@ class Juego{
         string descripcion;
         int costo;
         Desarrollador* dev;
-        list<DtCategoria*> categorias;
+        list<Categoria*> categorias;
         list<Partida*> partidas;
         list<Estadistica*> estadisticas;
         list<Suscripcion*> sub;
     public:
         Juego();
-        Juego(string nombre, string descripcion,int costo, Desarrollador* dev, list<DtCategoria*> categorias);
+        Juego(string nombre, string descripcion,int costo, Desarrollador* dev, list<Categoria*> categorias);
         void setNombre(string nombre);
         void setDescripcion(string descripcion);
         void setCosto(int costo);
@@ -37,11 +37,15 @@ class Juego{
         string getDescripcion();
         int getCosto();
         Desarrollador* getDesarrollador();
-        list<DtCategoria*> getCategorias();   
+        list<Categoria*> getCategorias();  
+        list<Partida*> getPartidas(); 
         DtJuego* getDtVideojuego(); 
         bool tengoSuscripcionJugador(Jugador* jugador);
+        bool tengoCategoria(int catId);
         void agregarSuscripcion(Suscripcion* suscripcion);
         void agregarPartida(Partida* partida);
+        void agregarEstadistica(Estadistica* estadistica);
+        void cancelarSuscripcion();
         ~Juego();
 };
 

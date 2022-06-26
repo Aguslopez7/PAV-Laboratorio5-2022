@@ -10,7 +10,7 @@ class PartidaIndividual : public Partida{
     bool continuaPartidaAnterior;
   public:
     PartidaIndividual ();
-    PartidaIndividual (DtFechaHora* fecha, int duracion, Jugador* jugador, bool continuaPartidaAnterior);
+    PartidaIndividual (int id,DtFechaHora* fecha, int duracion, Jugador* jugador, bool continuaPartidaAnterior);
     void setContinuaPartidaAnterior(bool continuaPartidaAnterior);
     bool getContinuaPartidaAnterior();
     int darTotalHorasParticipantes();

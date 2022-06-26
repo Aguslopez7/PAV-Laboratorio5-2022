@@ -20,6 +20,7 @@ class DtCategoria {
     string getGenero();
     int getId();
     string getPlataforma();
+    void imprimirPar();
     ~DtCategoria();
 };
 

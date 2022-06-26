@@ -11,8 +11,17 @@ void CAgregarVideojuego::solicitarInfo(string nombre, string descripcion, int co
     this->costo=costo;
 }
 
-void CAgregarVideojuego::agregarCategoria(DtCategoria* dt){
-    this->listDtCategorias.push_back(dt);
+void CAgregarVideojuego::agregarCategoria(Categoria* dt){
+    this->listCategorias.push_back(dt);
+}
+
+list<DtCategoria*> CAgregarVideojuego::mostrarCat(){
+    list<DtCategoria*> listaDtCat;
+    for(list<Categoria*>::iterator it = listCategorias.begin(); it != listCategorias.end(); ++it){
+        DtCategoria* dtCat = (*it)->getDtCategoria();
+        listaDtCat.push_back(dtCat);
+    }
+    return listaDtCat;
 }
 
 void CAgregarVideojuego::confirmarJuego(){
@@ -20,7 +29,7 @@ void CAgregarVideojuego::confirmarJuego(){
     Sesion* sesi = Sesion::getInstancia();  
     Usuario* u = sesi->getUsuario();
     Desarrollador* dev = dynamic_cast<Desarrollador*> (u);
-    Juego* juego = new Juego(this->nombre, this->descripcion, this->costo, dev, this->listDtCategorias);
+    Juego* juego = new Juego(this->nombre, this->descripcion, this->costo, dev, this->listCategorias);
     manJue->add(juego);
 }
 

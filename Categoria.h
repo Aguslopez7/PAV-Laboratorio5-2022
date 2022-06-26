@@ -24,7 +24,6 @@ class Categoria{
         string getTipoGenero();
         int getId();
         string getTipoPlataforma();
-        //static int getAutoId();
         DtCategoria* getDtCategoria();
         ~Categoria();
 };

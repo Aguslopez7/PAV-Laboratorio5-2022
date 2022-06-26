@@ -20,7 +20,7 @@ class CAgregarCategoria : public ICAgregarCategoria {
         bool hayCategorias();
         void solictarDatos( string descripcion, string genero, string plataforma);
         void confirmarCategoria();
-        DtCategoria* buscarCat(int id);
+        Categoria* buscarCat(int id);
         void cancelar();
 };
 

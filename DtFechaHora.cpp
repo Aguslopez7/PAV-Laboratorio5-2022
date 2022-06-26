@@ -52,7 +52,7 @@ void DtFechaHora::setMinuto(int minuto){
 
 DtFechaHora::~DtFechaHora(){}
 
-ostream& operator <<(ostream &salida, DtFechaHora &dtFH)
+ostream& operator <<(ostream &salida,const DtFechaHora &dtFH)
 {
     salida << dtFH.dia << "/" << dtFH.mes << "/" << dtFH.anio << " - " << dtFH.hora << ":" << dtFH.minuto;
     return salida;

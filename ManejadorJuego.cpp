@@ -17,7 +17,7 @@ list<Juego*> ManejadorJuego::listarJuegos(){
     return listJuegos;
 }
 
-Juego* ManejadorJuego::find(string juego){
+Juego* ManejadorJuego::getJuego(string juego){
   map<string,Juego*>::iterator it = this->colJuegos.find(juego);
   return (it != colJuegos.end())? it->second : NULL;
 }
@@ -31,8 +31,9 @@ bool ManejadorJuego::exist(string nombre){
   return (it != this->colJuegos.end());
 }
 
-void ManejadorJuego::erase(string juego){
-  this->colJuegos.erase(juego);
+void ManejadorJuego::removerJuego(Juego* juego){
+    map<string,Juego*>::iterator it = this->colJuegos.find(juego->getNombre());
+    this->colJuegos.erase(it);
 }
 
 ManejadorJuego::~ManejadorJuego(){}

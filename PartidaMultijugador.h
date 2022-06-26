@@ -11,13 +11,14 @@ class PartidaMultijugador : public Partida{
     int cantJugadores;
   public:
     PartidaMultijugador ();
-    PartidaMultijugador (DtFechaHora* fecha, int duracion, Jugador* jugador, bool trasmitidaEnVivo, int cantJugadores);
+    PartidaMultijugador (int id,DtFechaHora* fecha, int duracion, Jugador* jugador, bool trasmitidaEnVivo, int cantJugadores);
     bool getTrasmitidaEnVivo();
     void setTrasmitidaEnVivo(bool trasmitidaEnVivo);
     int getCantidadJugadores();
     void setCantidadJugadores(int cantJugadores);
-    ~PartidaMultijugador ();
     int darTotalHorasParticipantes();
+    ~PartidaMultijugador ();
+    
 };
 
 #endif

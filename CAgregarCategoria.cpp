@@ -46,11 +46,10 @@ void CAgregarCategoria::confirmarCategoria(){
 	mCat->add(nuevaCat);
 }
 
-DtCategoria* CAgregarCategoria::buscarCat(int id){
+Categoria* CAgregarCategoria::buscarCat(int id){
     ManejadorCategoria* mC = ManejadorCategoria::getInstancia();
     Categoria* cat = mC->find(id);
-    DtCategoria* dtCat = cat->getDtCategoria();
-    return dtCat;
+    return cat;
 }
 
 void CAgregarCategoria::cancelar(){

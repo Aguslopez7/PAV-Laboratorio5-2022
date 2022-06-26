@@ -56,7 +56,7 @@ bool CSuscribirseaVideojuego::tieneSuscripcion()
     Usuario* u = sesion->getUsuario();
     Jugador* jug = dynamic_cast<Jugador*> (u);
     ManejadorJuego* manJue = ManejadorJuego::getInstancia();
-    Juego* juego = manJue->find(this->nombreJuego);
+    Juego* juego = manJue->getJuego(this->nombreJuego);
     bool retorno = juego->tengoSuscripcionJugador(jug);
     return retorno;
 }
@@ -66,7 +66,7 @@ void CSuscribirseaVideojuego::SuscribirseAVideojuego(TipoPago tipo){
     Usuario* u = sesion->getUsuario();
     Jugador* jug = dynamic_cast<Jugador*> (u);
     ManejadorJuego* manJue = ManejadorJuego::getInstancia();
-    Juego* juego = manJue->find(this->nombreJuego);
+    Juego* juego = manJue->getJuego(this->nombreJuego);
     time_t t = time(0);
     tm *now = localtime(&t);                //paso fecha del sistema
     DtFechaHora* fechaHora = new DtFechaHora(now->tm_mday, (now->tm_mon + 1), (now->tm_year + 1900), now->tm_hour, now->tm_min);

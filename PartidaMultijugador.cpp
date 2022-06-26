@@ -2,7 +2,7 @@
 
 PartidaMultijugador::PartidaMultijugador(){}
 
-PartidaMultijugador::PartidaMultijugador(DtFechaHora* fecha, int duracion,Jugador* jugador, bool trasmitidaEnVivo, int cantJugadores):Partida(fecha,duracion,jugador){
+PartidaMultijugador::PartidaMultijugador(int id, DtFechaHora* fecha, int duracion,Jugador* jugador, bool trasmitidaEnVivo, int cantJugadores):Partida(id,fecha,duracion,jugador){
   this->trasmitidaEnVivo=trasmitidaEnVivo;
   this->cantJugadores=cantJugadores;
 
@@ -27,6 +27,5 @@ int PartidaMultijugador::getCantidadJugadores(){
 void PartidaMultijugador::setCantidadJugadores(int cantJugadores){
   this->cantJugadores=cantJugadores;
 }
-
 
 PartidaMultijugador::~PartidaMultijugador(){}

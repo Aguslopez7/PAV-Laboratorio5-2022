@@ -30,7 +30,7 @@ bool CInfoJuego::hayJuegos(){
 
 DtJuego* CInfoJuego::selectJuego(string nombre){
     ManejadorJuego* mc = ManejadorJuego::getInstancia();
-    Juego* juego = mc->find(nombre);
+    Juego* juego = mc->getJuego(nombre);
     DtJuego* dtc= juego->getDtVideojuego();
     return dtc;
 }

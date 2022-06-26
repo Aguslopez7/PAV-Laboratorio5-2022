@@ -2,7 +2,7 @@
 
 PartidaIndividual::PartidaIndividual(){}
 
-PartidaIndividual::PartidaIndividual(DtFechaHora* fecha, int duracion,Jugador* jugador, bool continuaPartidaAnterior):Partida(fecha,duracion,jugador){
+PartidaIndividual::PartidaIndividual(int id,DtFechaHora* fecha, int duracion,Jugador* jugador, bool continuaPartidaAnterior):Partida(id,fecha,duracion,jugador){
   this->continuaPartidaAnterior=continuaPartidaAnterior;
 }
 

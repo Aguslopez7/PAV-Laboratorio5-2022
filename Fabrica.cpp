@@ -1,7 +1,7 @@
-
+#include "Fabrica.h"
 
 // Incluir todos los Controladores
-#include "Fabrica.h"
+
 #include "CAgregarCategoria.h"
 #include "CAgregarVideojuego.h"
 #include "CAltaUsuario.h"
@@ -10,7 +10,12 @@
 #include "CIniciarSesion.h"
 #include "CSuscribirseaVideojuego.h"
 #include "CInfoJuego.h"
-
+#include "CEliminarVideojuego.h"
+#include "CAsignarPuntaje.h"
+#include "CCancelarSuscripcion.h"
+#include "CBuscarPorCategoria.h"
+#include "CRankingVideojuego.h"
+#include "CVerPartidas.h"
 
 Fabrica* Fabrica::instancia = NULL;
 
@@ -61,6 +66,30 @@ ICIniciarSesion* Fabrica::getICIniciarSesion()
 ICSuscribirseaVideojuego* Fabrica::getICSuscribirseaVideojuego()
 {
 	return new CSuscribirseaVideojuego();
+}
+
+ICEliminarVideojuego* Fabrica::getICEliminarVideojuego(){
+	return new CEliminarVideojuego();
+}
+
+ICAsignarPuntaje* Fabrica::getICAsignarPuntaje(){
+	return new CAsignarPuntaje();
+}
+
+ICCancelarSuscripcion* Fabrica::getICCancelarSuscripcion(){
+	return new CCancelarSuscripcion();
+}
+
+ICBuscarPorCategoria* Fabrica::getICBuscarPorCategoria(){
+	return new CBuscarPorCategoria();
+}
+
+ICRankingVideojuego* Fabrica::getICRankingVideojuego(){
+	return new CRankingVideojuego();
+}
+
+ICVerPartidas* Fabrica::getICVerPartidas(){
+	return new CVerPartidas();
 }
 
 Fabrica::~Fabrica(){}

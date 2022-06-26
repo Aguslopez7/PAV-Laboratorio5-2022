@@ -32,4 +32,8 @@ string DtCategoria::getPlataforma(){
     return this->tipoPlataforma;
 }
 
+void DtCategoria::imprimirPar(){
+    cout << this->tipoGenero << " / " << this->tipoPlataforma << endl;
+}
+
 DtCategoria::~DtCategoria(){}

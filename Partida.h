@@ -3,27 +3,32 @@
 
 #include <string>
 #include <iostream>
+
+#include "DtPartida.h"
 #include "Definiciones.h"
 #include "DtFechaHora.h"
 #include "Jugador.h"
-//#include "DtPartida.h"
 
 using namespace std;
 
 class Partida {
   private:
+    int id;
     DtFechaHora* fecha;
     int duracion;
     Jugador* jugador;
   public:
     Partida();
-    Partida(DtFechaHora* fecha, int duracion, Jugador* jugador);
+    Partida(int id,DtFechaHora* fecha,int duracion,Jugador* jugador);
+    void setId(int id);
+    int getId();
     DtFechaHora* getFecha();
     void setFecha(DtFechaHora* fecha);
     int getDuracion();
     void setDuracion(int duracion);
-    ~Partida();
+    Jugador* getJugador();
     virtual int darTotalHorasParticipantes()=0;
+    ~Partida();
 };
 
 #endif

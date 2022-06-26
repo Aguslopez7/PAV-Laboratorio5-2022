@@ -1,6 +1,6 @@
 
-main: Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o PartidaIndividual.o PartidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o
-	g++ Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CCerrarSesion.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CSuscribirseaVideojuego.o Jugador.o Juego.o Partida.o PartidaIndividual.o PartidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtFechaHora.o DtCategoria.o main.o -g -o ejecutable
+main: Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CAsignarPuntaje.o CBuscarPorCategoria.o CCancelarSuscripcion.o CCerrarSesion.o CEliminarVideojuego.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CRankingVideojuego.o CSuscribirseaVideojuego.o CVerPartidas.o Jugador.o Juego.o Partida.o PartidaIndividual.o PartidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtPartida.o DtPartidaIndi.o DtPartidaMulti.o DtFechaHora.o DtCategoria.o main.o
+	g++ Fabrica.o Sesion.o ManejadorCategoria.o ManejadorJuego.o ManejadorUsuario.o CAgregarCategoria.o CAgregarVideoJuego.o CAltaUsuario.o CAsignarPuntaje.o CBuscarPorCategoria.o CCancelarSuscripcion.o CCerrarSesion.o CEliminarVideojuego.o CInfoJuego.o CIniciarPartida.o CIniciarSesion.o CRankingVideojuego.o CSuscribirseaVideojuego.o CVerPartidas.o Jugador.o Juego.o Partida.o PartidaIndividual.o PartidaMultijugador.o Categoria.o Desarrollador.o Estadistica.o Suscripcion.o Usuario.o DtJuego.o DtPartida.o DtPartidaIndi.o DtPartidaMulti.o DtFechaHora.o DtCategoria.o main.o -g -o ejecutable
 
 run: main
 	./ejecutable
@@ -41,8 +41,20 @@ CAgregarVideoJuego.o : CAgregarVideoJuego.cpp
 CAltaUsuario.o : CAltaUsuario.cpp
 	g++ CAltaUsuario.cpp -g -c
 
+CAsignarPuntaje.o : CAsignarPuntaje.cpp
+	g++ CAsignarPuntaje.cpp -g -c
+
+CBuscarPorCategoria.o : CBuscarPorCategoria.cpp
+	g++ CBuscarPorCategoria.cpp -g -c
+
+CCancelarSuscripcion.o :CCancelarSuscripcion.cpp
+	g++ CCancelarSuscripcion.cpp -g -c
+
 CCerrarSesion.o : CCerrarSesion.cpp
 	g++ CCerrarSesion.cpp -g -c
+
+CEliminarVideojuego.o : CEliminarVideojuego.cpp
+	g++ CEliminarVideojuego.cpp -g -c
 
 CInfoJuego.o : CInfoJuego.cpp
 	g++ CInfoJuego.cpp -g -c
@@ -53,8 +65,14 @@ CIniciarPartida.o : CIniciarPartida.cpp
 CIniciarSesion.o : CIniciarSesion.cpp
 	g++ CIniciarSesion.cpp -g -c
 
+CRankingVideojuego.o : CRankingVideojuego.cpp
+	g++ CRankingVideojuego.cpp -g -c
+
 CSuscribirseaVideojuego.o : CSuscribirseaVideojuego.cpp
 	g++ CSuscribirseaVideojuego.cpp -g -c
+
+CVerPartidas.o : CVerPartidas.cpp
+	g++ CVerPartidas.cpp -g -c
 
 ############### Clases Genericas ###############
 
@@ -92,6 +110,15 @@ Usuario.o : Usuario.cpp
 
 DtJuego.o : DtJuego.cpp
 	g++ DtJuego.cpp -g -c
+
+DtPartida.o : DtPartida.cpp
+	g++ DtPartida.cpp -g -c
+
+DtPartidaIndi.o : DtPartidaIndi.cpp
+	g++ DtPartidaIndi.cpp -g -c
+
+DtPartidaMulti.o : DtPartidaMulti.cpp
+	g++ DtPartidaMulti.cpp -g -c
 
 DtFechaHora.o : DtFechaHora.cpp
 	g++ DtFechaHora.cpp -g -c
