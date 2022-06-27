@@ -13,10 +13,5 @@ int Estadistica:: getPuntaje(){
     return this->puntaje;
 }
 
-/*DtEstadistica *Estadistica:: getDtEstadistica(){
-    DtEstadistica *dt = new DtEstadistica(this->edad, this->nickname);
-    return dt;
-}*/
-
 Estadistica::~Estadistica(){}
 

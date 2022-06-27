@@ -23,6 +23,7 @@ class CAltaUsuario : public ICAltaUsuario{
         void datosJugador(string nickname, string descripcion);
         void ingNickname(string nickname);
         bool checkUser(string data);
+        bool hayUsuarios();
         void altaUsuario();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         void cancelar();
 };

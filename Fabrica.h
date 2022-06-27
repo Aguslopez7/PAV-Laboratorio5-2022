@@ -12,6 +12,12 @@
 #include "ICIniciarSesion.h"
 #include "ICSuscribirseaVideojuego.h"
 #include "ICInfoJuego.h"
+#include "ICEliminarVideojuego.h"
+#include "ICAsignarPuntaje.h"
+#include "ICCancelarSuscripcion.h"
+#include "ICBuscarPorCategoria.h"
+#include "ICRankingVideojuego.h"
+#include "ICVerPartidas.h"
 
 using namespace std;
 
@@ -29,6 +35,12 @@ class Fabrica{
         ICIniciarPartida* getICIniciarPartida();
         ICIniciarSesion* getICIniciarSesion();
         ICSuscribirseaVideojuego* getICSuscribirseaVideojuego();
+        ICEliminarVideojuego* getICEliminarVideojuego();
+        ICAsignarPuntaje* getICAsignarPuntaje();
+        ICCancelarSuscripcion* getICCancelarSuscripcion();
+        ICBuscarPorCategoria* getICBuscarPorCategoria();
+        ICRankingVideojuego* getICRankingVideojuego();
+        ICVerPartidas* getICVerPartidas();
         ~Fabrica();
 };
 #endif

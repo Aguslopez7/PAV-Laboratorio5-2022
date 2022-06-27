@@ -1,6 +1,7 @@
 #include "Categoria.h"
 
 Categoria::Categoria(){}
+
 Categoria::Categoria(int id, string descripcion, string tipoGenero, string tipoPlataforma){
   this->id=id;
   this->descripcion=descripcion;
@@ -25,8 +26,13 @@ void Categoria::setTipoGenero(string tipoGenero){
 }
 
 int Categoria::getId(){
-  return this->id;
+  return this->id; 
 }
+
+/*int Categoria::getAutoId(){
+  id=id+1;
+  return id;
+}*/
 
 string Categoria::getTipoGenero(){
   return this->tipoGenero;
@@ -40,8 +46,7 @@ string Categoria::getTipoPlataforma(){
   return this->tipoPlataforma;
 }
 DtCategoria* Categoria::getDtCategoria(){
-  string plataforma, genero;
-  DtCategoria* DtC= new DtCategoria(this->tipoGenero, this->tipoPlataforma);
+  DtCategoria* DtC = new DtCategoria(this->id,this->tipoGenero, this->tipoPlataforma);
   return DtC;
 }
 

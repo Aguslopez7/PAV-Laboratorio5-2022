@@ -12,12 +12,13 @@ class ManejadorCategoria
 	private:
 		static ManejadorCategoria *instancia;
 		ManejadorCategoria();
-		map<int, Categoria*> colCategorias; // string, string (genero , plataforma)
+		map<int, Categoria*> colCategorias; 
 	public:
 		static ManejadorCategoria* getInstancia();
-        list<Categoria*> listarCategorias(); // Verificar
-		Categoria* find(int id); // Verificar
+        list<Categoria*> listarCategorias(); 
+		Categoria* find(int id); 
 		void add(Categoria* categoria);
+		bool existeCat(int id);
 		void erase(int id);
 		virtual ~ManejadorCategoria();
 };

@@ -29,7 +29,7 @@ class DtFechaHora {
     int getHora();
     int getMinuto();
     ~DtFechaHora();
-    friend ostream& operator <<(ostream&, DtFechaHora&);
+    friend ostream& operator <<(ostream&, const DtFechaHora&);
 };
 
 #endif

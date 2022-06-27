@@ -2,9 +2,10 @@
 
 Usuario::Usuario(){}
 
-Usuario::Usuario(string email, string password){
+Usuario::Usuario(string email, string password, int tipoUsuario){
     this->email=email;
     this->password=password;
+    this->tipoUsuario=tipoUsuario;
 }
 
 void Usuario:: setEmail(string email){
@@ -20,6 +21,10 @@ string Usuario:: getPassword(){
 
 string Usuario:: getEmail(){
     return this->email;
+}
+
+int Usuario::getTipoUsuario(){
+    return this->tipoUsuario;
 }
 
 /*DtUsuario *Usuario:: getDtUsuario(){

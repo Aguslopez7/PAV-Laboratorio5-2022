@@ -13,10 +13,11 @@ using namespace std;
 
 class CInfoJuego: public ICInfoJuego {
     private:
-		string nombre;
+		  string nombre;
     public:
-    list<string> listarJuegos();
-	  DtJuego* selectJuego(string nombre);
+      list<string> listarJuegos();
+      bool hayJuegos();
+      DtJuego* selectJuego(string nombre);
 };
 
 #endif

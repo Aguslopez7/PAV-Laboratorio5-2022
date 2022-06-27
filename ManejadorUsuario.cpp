@@ -31,7 +31,7 @@ void ManejadorUsuario::agregarUsuario(Usuario* usuario){
 
 bool ManejadorUsuario::existeUsuario(string email){ 
   map<string,Usuario*>::iterator it = this->colUsuarios.find(email);
-  return (it != this->colUsuarios.end());
+    return (it != this->colUsuarios.end());
 }
 
 void ManejadorUsuario::eliminarUsuario(string email){

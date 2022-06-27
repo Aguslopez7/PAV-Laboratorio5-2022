@@ -15,9 +15,11 @@ class ManejadorJuego{
     public:
         static ManejadorJuego* getInstancia();
         list<Juego*> listarJuegos();
-        Juego* find(string juego);
+        Juego* getJuego(string juego);
         void add(Juego* juego);
-        void erase(string juego);
+        void erase(string nombre);
+        bool exist(string nombre);
+        void removerJuego(Juego* juego);
         virtual ~ManejadorJuego();
 };
 #endif

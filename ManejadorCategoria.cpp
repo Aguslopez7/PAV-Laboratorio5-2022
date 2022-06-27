@@ -28,6 +28,11 @@ void ManejadorCategoria::add(Categoria* categoria)
 	this->colCategorias.insert(pair<int, Categoria*>(categoria->getId(), categoria));
 }
 
+bool ManejadorCategoria::existeCat(int id){ 
+  map<int,Categoria*>::iterator it = this->colCategorias.find(id);
+  return (it != this->colCategorias.end());
+}
+
 void ManejadorCategoria::erase(int id)
 {
 	this->colCategorias.erase(id);

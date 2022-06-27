@@ -10,10 +10,11 @@ using namespace std;
 
 class Jugador : public Usuario{
     private:
-        string nickname, descripcion;
+        string nickname="";
+        string descripcion;
     public:
         Jugador();
-        Jugador(string email, string password, string nickname, string descripcion);
+        Jugador(string email, string password, int tipoUsuario, string nickname, string descripcion);
         void setNickname(string nickname);
         void setDescripcion(string descripcion);
         string getNickname();

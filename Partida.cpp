@@ -2,10 +2,19 @@
 
 Partida::Partida(){}
 
-Partida::Partida(DtFechaHora* fecha, int duracion, Jugador* jugador){
+Partida::Partida(int id,DtFechaHora* fecha, int duracion, Jugador* jugador){
+  this->id=id;
   this->fecha=fecha;
   this->duracion=duracion;
   this->jugador = jugador;
+}
+
+void Partida::setId(int id){
+  this->id=id;
+}
+
+int Partida::getId(){
+  return this->id;
 }
 
 DtFechaHora* Partida::getFecha(){
@@ -22,6 +31,10 @@ int Partida::getDuracion(){
 
 void Partida::setDuracion(int duracion){
   this->duracion=duracion;
+}
+
+Jugador* Partida::getJugador(){
+  return this->jugador;
 }
 
 Partida::~Partida(){}

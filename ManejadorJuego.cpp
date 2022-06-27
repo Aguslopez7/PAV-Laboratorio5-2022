@@ -17,7 +17,7 @@ list<Juego*> ManejadorJuego::listarJuegos(){
     return listJuegos;
 }
 
-Juego* ManejadorJuego::find(string juego){
+Juego* ManejadorJuego::getJuego(string juego){
   map<string,Juego*>::iterator it = this->colJuegos.find(juego);
   return (it != colJuegos.end())? it->second : NULL;
 }
@@ -26,8 +26,14 @@ void ManejadorJuego::add(Juego* juego){
     this->colJuegos.insert(pair<string,Juego*>(juego->getNombre(),juego));
 }
 
-void ManejadorJuego::erase(string juego){
-  this->colJuegos.erase(juego);
+bool ManejadorJuego::exist(string nombre){ 
+  map<string,Juego*>::iterator it = this->colJuegos.find(nombre);
+  return (it != this->colJuegos.end());
+}
+
+void ManejadorJuego::removerJuego(Juego* juego){
+    map<string,Juego*>::iterator it = this->colJuegos.find(juego->getNombre());
+    this->colJuegos.erase(it);
 }
 
 ManejadorJuego::~ManejadorJuego(){}

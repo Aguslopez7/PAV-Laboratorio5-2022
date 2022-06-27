@@ -1,4 +1,5 @@
 #include "Sesion.h"
+#include "Desarrollador.h"
 
 Sesion* Sesion::instancia = NULL;
 

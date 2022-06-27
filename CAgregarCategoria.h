@@ -12,12 +12,15 @@ using namespace std;
 class CAgregarCategoria : public ICAgregarCategoria {
     private:
         int id;
+        string descripcion;
         string genero;
         string plataforma;
     public:
         list<DtCategoria*> listarDtCategorias();
-        void solictarDatos(int id, string genero, string plataforma);
+        bool hayCategorias();
+        void solictarDatos( string descripcion, string genero, string plataforma);
         void confirmarCategoria();
+        Categoria* buscarCat(int id);
         void cancelar();
 };
 

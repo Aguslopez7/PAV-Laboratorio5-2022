@@ -12,14 +12,15 @@ class Usuario{
   private:
     string email;
     string password;
-
+    int tipoUsuario;
   public:
     Usuario();
-    Usuario(string email, string password);
+    Usuario(string email, string password, int tipoUsuario);
     void setEmail(string email);
     void setPassword(string password);
     string getEmail();
     string getPassword();
+    int getTipoUsuario();
     virtual ~Usuario() = 0;
 };
 
