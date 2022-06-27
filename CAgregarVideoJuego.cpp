@@ -11,8 +11,13 @@ void CAgregarVideojuego::solicitarInfo(string nombre, string descripcion, int co
     this->costo=costo;
 }
 
+<<<<<<< HEAD
 void CAgregarVideojuego::agregarCategoria(Categoria* cat){
     this->listCategorias.push_back(cat);
+=======
+void CAgregarVideojuego::agregarCategoria(Categoria* dt){
+    this->listCategorias.push_back(dt);
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
 }
 
 list<DtCategoria*> CAgregarVideojuego::mostrarCat(){

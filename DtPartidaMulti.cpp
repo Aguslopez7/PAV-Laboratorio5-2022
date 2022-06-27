@@ -28,11 +28,19 @@ void DtPartidaMulti::setCantidadJugadores(int cantJugadores){
 }
 
 void DtPartidaMulti::imprimirMulti(){
+<<<<<<< HEAD
   string vivo;
   DtFechaHora* fecha = this->getFecha();
   Jugador* jugador = this->getJugador();
   cout << longTab << COLOR_LG << "┌─────────────────────────────────┐" << endl;
   cout << longTab << "│ ❯ ID: " << this->getId() << endl;
+=======
+  system("clear");
+  string vivo;
+  DtFechaHora* fecha = this->getFecha();
+  Jugador* jugador = this->getJugador();
+  cout << longTab << "┌───────────────────────────────────────" << endl;
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
   cout << longTab << "│ ❯ Fecha: " << *fecha << endl;
   cout << longTab << "│ ❯ Duracion: " << this->getDuracion() << endl;
   cout << longTab << "│ ❯ Jugador: " << jugador->getNickname() << endl;
@@ -44,7 +52,11 @@ void DtPartidaMulti::imprimirMulti(){
   cout << longTab << "│ ❯ En vivo: " << vivo << endl;
   cout << longTab << "│ ❯ Cantidad de jugadores: " << this->getCantidadJugadores() << endl;
   cout << longTab << "│ ❯ Total horas jugadas: " << this->darTotalHorasParticipantes() << endl;
+<<<<<<< HEAD
   cout << longTab << "└─────────────────────────────────┘" << COLOR_RESET << endl;
+=======
+  cout << longTab << "└───────────────────────────────────────" << endl;
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
 }
 
 DtPartidaMulti::~DtPartidaMulti(){}

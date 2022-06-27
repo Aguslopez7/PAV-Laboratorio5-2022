@@ -51,18 +51,36 @@ bool CAltaUsuario::hayUsuarios()
 
 void CAltaUsuario::altaUsuario()
 {
+<<<<<<< HEAD
     if (!(this->nombreEmpresa.empty())){
+=======
+    if (!(this->nombreEmpresa.empty()))
+    {
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
         int tipoUsuario = 1;
         Desarrollador *nuevoDev = new Desarrollador(this->email, this->password, tipoUsuario, this->nombreEmpresa);
         ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
         mU->agregarUsuario(nuevoDev);
+<<<<<<< HEAD
     }else if (!(checkUser(this->nickname)) && (!(this->nickname.empty()))){
+=======
+    }
+    else if (!(checkUser(this->nickname)) && (!(this->nickname.empty())))
+    {
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
         int tipoUsuario = 0;
         Jugador *nuevoJug = new Jugador(this->email, this->password, tipoUsuario, this->nickname, this->descripcion);
         ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
         mU->agregarUsuario(nuevoJug);
+<<<<<<< HEAD
     }else{
         throw invalid_argument("│ 🔔 Ya Existe ese Nickname! │");
+=======
+    }
+    else
+    {
+        throw invalid_argument("♦ Ese nickname ya existe.");
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
     }
 }
 

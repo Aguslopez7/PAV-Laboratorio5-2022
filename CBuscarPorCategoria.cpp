@@ -4,6 +4,7 @@
 #include "ManejadorCategoria.h"
 #include "Juego.h"
 
+<<<<<<< HEAD
  bool CBuscarPorCategoria::existeCategoria(int idCat){
     bool uwu = false;
     ManejadorCategoria* manCat = ManejadorCategoria::getInstancia();
@@ -19,6 +20,8 @@ Categoria* CBuscarPorCategoria::dameCategoria(int idCat){
     return cat;
 }
 
+=======
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
 list<DtJuego*> CBuscarPorCategoria::buscarPorCategoria(int catId){
     ManejadorJuego* manJue = ManejadorJuego::getInstancia();
     list<Juego*> listaJuegos = manJue->listarJuegos();

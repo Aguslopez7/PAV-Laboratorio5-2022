@@ -4,8 +4,11 @@
 #include "PartidaMultijugador.h"
 #include "ManejadorJuego.h"
 #include "Sesion.h"
+<<<<<<< HEAD
 #include "Jugador.h"
 
+=======
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
 
 using namespace std;
 
@@ -133,7 +136,10 @@ void Juego::cancelarSuscripcion(){
     while(it != sub.end() && (!sub.empty())){
         if (jugador == (*it)->getJugador()){
             this->sub.remove(*it);
+<<<<<<< HEAD
             break;
+=======
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
         }
         ++it;
     }

@@ -73,6 +73,7 @@ string DtJuego::getNombre(){
 }
 
 void DtJuego::imprimirInfo(){
+<<<<<<< HEAD
     cout << "\n" << longTab << COLOR_LG << " ❯ Nombre: " << this->nombre << endl;
     cout << longTab << " ❯ Descripcion: " << this->descripcion << endl;
     cout << longTab << " ❯ Costo: $" << this->costo << endl;
@@ -113,6 +114,58 @@ void DtJuego::imprimirNomPuntajeHorasH(){
     cout << longTab << COLOR_SB << " ❯ Nombre: " << this->nombre << endl;
     cout << longTab << " ❯ Descripcion: " << this->descripcion << endl;
     cout << longTab << " ❯ Puntaje promedio: " << this->puntajePromedio << COLOR_RESET << endl;
+=======
+    cout << "\n" << longTab << COLOR_LG << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Descripcion: " << this->descripcion << endl;
+    cout << longTab << "│ ❯ Costo: " << this->costo << endl;
+    cout << longTab << "│ ❯ Categorias:" << endl;
+    for(list<Categoria*>::iterator it = this->categoria.begin(); it != this->categoria.end(); ++it){
+        cout << longTab << "│\t" << longTab << "#id: " << (*it)->getId() << " -> " << (*it)->getTipoGenero() << "/" << (*it)->getTipoPlataforma() << endl;
+    }
+    cout << longTab << "│ ❯ Empresa: " << this->empresa << endl;
+    cout << longTab << "│ ❯ Puntaje promedio: " << this->puntajePromedio << endl;
+    cout << longTab << "│ ❯ Total horas jugadas: " << this->totalHorasJuego << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+}
+
+void DtJuego::imprimirNombreCosto(){
+    cout << longTab << COLOR_LG << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Costo: " << this->costo << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+}
+
+void DtJuego::imprimirNombre(){
+    cout << longTab << COLOR_LG << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+}
+
+void DtJuego::imprimirNombreDesc(){
+    cout << longTab << COLOR_LG << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Descrpcion: " << this->descripcion << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+}
+
+void DtJuego::imprimirNomPuntajeHorasP(){
+    cout << longTab << COLOR_SB << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ " << COLOR_LG << "❯ Puntaje promedio: " << this->puntajePromedio << endl;
+    cout << longTab << COLOR_SB << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Descripcion: " << this->descripcion << endl;
+    cout << longTab << "│ ❯ Total horas jugadas: " << this->totalHorasJuego << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+}
+
+void DtJuego::imprimirNomPuntajeHorasH(){
+    cout << longTab << COLOR_SB << "┌───────────────────────────────────────" << endl;
+    cout << longTab << "│ " << COLOR_LG << "❯ Total horas jugadas: " << this->totalHorasJuego << endl;
+    cout << longTab << COLOR_SB << "│ ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Descripcion: " << this->descripcion << endl;
+    cout << longTab << "│ ❯ Puntaje promedio: " << this->puntajePromedio << endl;
+    cout << longTab << "└───────────────────────────────────────" << COLOR_RESET << endl;
+>>>>>>> 5388b3a81213b52523464c3c4c954157649dddca
 }
 
 DtJuego::~DtJuego(){}
