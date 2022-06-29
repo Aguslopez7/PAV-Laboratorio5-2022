@@ -1088,7 +1088,8 @@ void menuAgregarVideojuego() {
     cin >> costo;
     if (icAgregarCategoria->hayCategorias()) {
         while (x != 0) {
-            cout << longTab << "♦ Seleccionar Categoria: "
+            system("clear");
+            cout << longSpace << longTab << "♦ Seleccionar Categoria: "
                  << "\n"
                  << endl;
             list<DtCategoria *> listaDt = icAgregarCategoria->listarDtCategorias();
