@@ -74,16 +74,12 @@ DtJuego* Juego::getDtVideojuego(){
     }
     
     for(list<Partida*>::iterator it=partidas.begin(); it!=partidas.end(); ++it){
-        PartidaIndividual* pi = dynamic_cast<PartidaIndividual*>(*it);
-        if(pi!=NULL){
+        if(PartidaIndividual* pi = dynamic_cast<PartidaIndividual*> (*it)){
             sumandoP= pi->darTotalHorasParticipantes();
             contadorP+= sumandoP;
-        }else{
-            PartidaMultijugador* pm = dynamic_cast<PartidaMultijugador*>(*it);
-            if(pm!=NULL){
+        }else if(PartidaMultijugador* pm = dynamic_cast<PartidaMultijugador*> (*it)){
                sumandoP=pm->darTotalHorasParticipantes();
                contadorP+= sumandoP;
-            }
         }
     }
     

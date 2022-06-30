@@ -26,7 +26,7 @@ class CIniciarPartida : public ICIniciarPartida {
         int duracion;
         int cantJugadores;
         list<Usuario*> suscritos;
-        int tipo;
+        char tipo;
     public:
         void seleccionarVideojuego(string nombre);
         void datoIndividual(bool continuaPartidaAnterior, int duracion, int tipo);

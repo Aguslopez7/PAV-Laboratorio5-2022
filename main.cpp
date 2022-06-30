@@ -1177,7 +1177,7 @@ void menuIniciarPartida() {
     cout << longSpace << longTab << "╔══════════════════════════════════════════╗\n";
     cout << longTab << COLOR_SB << "║           ♦ 🎯 Iniciar Partida ♦         ║" << COLOR_RESET << endl;
     cout << longTab << "╚══════════════════════════════════════════╝\n";
-    char cond;
+    int cond;
     string nom;
     bool cont = false;
     int cond2, dur, jug;
@@ -1209,7 +1209,7 @@ void menuIniciarPartida() {
             cout << longTab << "❯ Opción: ";
             cin >> cond;
             switch (cond) {
-                case '2': {
+                case 2: {
                     system("clear");
                     cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
                     cout << longTab << "│            Desea Transmitir en Vivo?          │" << endl;
@@ -1231,7 +1231,7 @@ void menuIniciarPartida() {
                     cin >> jug;
                     icIniciarPartida->datoMultijugador(cont, dur, jug, cond);
                 } break;
-                case '1': {
+                case 1: {
                     system("clear");
                     cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
                     cout << longTab << "│           Desea Continuar la Partida?         │" << endl;
@@ -1265,12 +1265,12 @@ void menuIniciarPartida() {
             cout << longTab << "❯ Opción: ";
             cin >> cond;
             switch (cond) {
-                case '1': {
+                case 1: {
                     icIniciarPartida->altaPartida();
                     menuCargarPartida();
                     system("clear");
                 } break;
-                case '0': {
+                case 0: {
                     icIniciarPartida->cancelar();
                     system("clear");
                 } break;
