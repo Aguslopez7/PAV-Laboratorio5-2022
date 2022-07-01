@@ -92,7 +92,7 @@ void DtJuego::imprimirNombreCosto(){
 
 void DtJuego::imprimirNombre(){
     cout << longTab << COLOR_LG << "┌────────────────────┐" << endl;
-    cout << longTab << " ❯ Nombre: " << this->nombre << endl;
+    cout << longTab << "│ ❯ Nombre: " << this->nombre << endl;
     cout << longTab << "└────────────────────┘" << COLOR_RESET << endl;
 }
 

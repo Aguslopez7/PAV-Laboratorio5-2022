@@ -31,20 +31,18 @@ void DtPartidaMulti::imprimirMulti(){
   string vivo;
   DtFechaHora* fecha = this->getFecha();
   Jugador* jugador = this->getJugador();
-  cout << longTab << COLOR_LG << "┌─────────────────────────────────┐" << endl;
-  cout << longTab << "│ ❯ ID: " << this->getId() << endl;
-  cout << longTab << "│ ❯ Fecha: " << *fecha << endl;
-  cout << longTab << "│ ❯ Duracion: " << this->getDuracion() << endl;
-  cout << longTab << "│ ❯ Jugador: " << jugador->getNickname() << endl;
+  cout << longTab << COLOR_LG << " ❯ ID: " << this->getId() << endl;
+  cout << longTab << " ❯ Fecha: " << *fecha << endl;
+  cout << longTab << " ❯ Duracion: " << this->getDuracion() << endl;
+  cout << longTab << " ❯ Jugador: " << jugador->getNickname() << endl;
   if(this->getTrasmitidaEnVivo() ==1){
     vivo = "SI";
   }else{
     vivo = "NO";
   }
-  cout << longTab << "│ ❯ En vivo: " << vivo << endl;
-  cout << longTab << "│ ❯ Cantidad de jugadores: " << this->getCantidadJugadores() << endl;
-  cout << longTab << "│ ❯ Total horas jugadas: " << this->darTotalHorasParticipantes() << endl;
-  cout << longTab << "└─────────────────────────────────┘" << COLOR_RESET << endl;
+  cout << longTab << " ❯ En vivo: " << vivo << endl;
+  cout << longTab << " ❯ Cantidad de jugadores: " << this->getCantidadJugadores() << endl;
+  cout << longTab << " ❯ Total horas jugadas: " << this->darTotalHorasParticipantes() << COLOR_RESET << endl;
 }
 
 DtPartidaMulti::~DtPartidaMulti(){}

@@ -402,7 +402,7 @@ bool menuCargarDatos() {
     int valor;
     bool retorno = false;
     cout << longSpace << longTab << "┌────────────────────────────────────────────┐" << endl;
-    cout << longTab << "│      Desea cargar los datos de prueba?     │" << endl;
+    cout << longTab << "│          💾  Cargar Datos de Prueba        │" << endl;
     cout << longTab << "├────────────────────────────────────────────┤\n";
     cout << longTab << "│                                            │\n";
     cout << longTab << "│                                            │\n";
@@ -756,7 +756,10 @@ void menuAltaUsuario() {
         switch (num) {
             case '1': {
                 system("clear");
-                cout << longSpace<< longTab << "♦ Ingrese el nombre de la empresa: ";
+                cout << "\n"
+                << longSpace << longTab << COLOR_BW << "    🔧  Ingresar Datos del Desarrollador    " << COLOR_RESET << endl;
+                cout << longTab << "────────────────────────────────────────────" << endl;
+                cout << "\n" << longTab << "♦ Nombre de la Empresa: ";
                 cin >> nomEmp;
                 icAltaUsuario->datosEmpresa(nomEmp);
                 icAltaUsuario->altaUsuario();
@@ -766,9 +769,12 @@ void menuAltaUsuario() {
                 system("clear");
                 bool x;
                 string nick, desc;
-                cout << longSpace << longTab << "♦ Ingrese nickname: ";
+                cout << "\n"
+                << longSpace << longTab << COLOR_BW << "       🎮  Ingresar Datos del Jugador       " << COLOR_RESET << endl;
+                cout << longTab << "────────────────────────────────────────────" << endl;
+                cout << "\n" << longTab << "♦ Nickname: ";
                 cin >> nick;
-                cout << longTab << "♦ Ingrese una breve descripcion: ";
+                cout << longTab << "♦ Breve Descripcion: ";
                 cin >> desc;
                 icAltaUsuario->datosJugador(nick, desc);
                 do {
@@ -784,7 +790,7 @@ void menuAltaUsuario() {
                         system("sleep 2.5");
                         system("clear");
                         cout << longSpace << longTab << "┌────────────────────────────────────────────┐" << endl;
-                        cout << longTab << "│   ¿Deseas volver a ingresar el nickname?   │" << endl;
+                        cout << longTab << "│    ¿Desea volver a ingresar el nickname?   │" << endl;
                         cout << longTab << "├────────────────────────────────────────────┤\n";
                         cout << longTab << "│                                            │\n";
                         cout << longTab << "│                1. Reintentar               │\n";
@@ -866,7 +872,7 @@ bool menuIniciarSesion1() {
                         system("sleep 2.5");
                         system("clear");
                         cout << longSpace << longTab << "┌────────────────────────────────────────────┐" << endl;
-                        cout << longTab << "│    ¿Deseas volver a ingresar al Sistema?   │" << endl;
+                        cout << longTab << "│     ¿Desea volver a ingresar al Sistema?   │" << endl;
                         cout << longTab << "├────────────────────────────────────────────┤\n";
                         cout << longTab << "│                                            │\n";
                         cout << longTab << "│                1. Reintentar               │\n";
@@ -950,7 +956,7 @@ void menuIniciarSesion2() {
                     system("sleep 2.5");
                     system("clear");
                     cout << longSpace << longTab << "┌────────────────────────────────────────────┐" << endl;
-                    cout << longTab << "│    ¿Deseas volver a ingresar al Sistema?   │" << endl;
+                    cout << longTab << "│     ¿Desea volver a ingresar al Sistema?   │" << endl;
                     cout << longTab << "├────────────────────────────────────────────┤\n";
                     cout << longTab << "│                                            │\n";
                     cout << longTab << "│                1. Reintentar               │\n";
@@ -1036,11 +1042,11 @@ void menuAgregarCategoria() {
              << COLOR_BW << longTab << "        📢  Ingrese Nueva Categoria         "
              << COLOR_RESET << endl;
              cout << longTab << "────────────────────────────────────────────" << endl;
-    cout << longTab << "♦ Ingrese su genero: ";
+    cout << "\n" << longTab << "♦ Genero: ";
     cin >> genero;
-    cout << longTab << "♦ Ingrese la plataforma: ";
+    cout << longTab << "♦ Plataforma: ";
     cin >> plataforma;
-    cout << longTab << "♦ Ingrese una breve descripcion: ";
+    cout << longTab << "♦ Breve Descripcion: ";
     cin >> desc;
     icAgregarCategoria->solictarDatos(desc, genero, plataforma);
     system("clear");
@@ -1107,7 +1113,7 @@ void menuAgregarVideojuego() {
                 DoneMessage();
                 cout << endl;
                 cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-                cout << longTab << "│   ¿Deseas volver a ingresar otra Categoria?   │" << endl;
+                cout << longTab << "│    ¿Desea volver a ingresar otra Categoria?   │" << endl;
                 cout << longTab << "├───────────────────────────────────────────────┤\n";
                 cout << longTab << "│                                               │\n";
                 cout << longTab << "│                   1. Aceptar                  │\n";
@@ -1211,21 +1217,24 @@ void menuIniciarPartida() {
             switch (cond) {
                 case 2: {
                     system("clear");
-                    cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-                    cout << longTab << "│            Desea Transmitir en Vivo?          │" << endl;
-                    cout << longTab << "├───────────────────────────────────────────────┤\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "│                   1. Aceptar                  │\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "│                   0. Cancelar                 │\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "└───────────────────────────────────────────────┘" << endl;
+                    cout << "\n"
+                    << longSpace << longTab << COLOR_BW << "      👥  Detalles Partida Multijugador     " << COLOR_RESET << endl;
+                    cout << longTab <<                     "────────────────────────────────────────────" << endl;
+                    cout << "\n" << longTab << "┌───────────────────────────────────────────┐" << endl;
+                    cout << longTab << "│         ¿Desea Transmitir en Vivo?        │" << endl;
+                    cout << longTab << "├───────────────────────────────────────────┤\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "│                 1. Aceptar                │\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "│                 0. Cancelar               │\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "└───────────────────────────────────────────┘" << endl;
                     cout << longTab << "❯ Opción: ";
                     cin >> cond2;
                     if (cond2 == 1) {
                         cont = true;
                     }
-                    cout << longTab << "♦ Ingrese la duracion de la partida: ";
+                    cout << "\n" << longTab << "♦ Ingrese la duracion de la partida: ";
                     cin >> dur;
                     cout << longTab << "♦ Ingrese la cantidad de jugadores: ";
                     cin >> jug;
@@ -1233,28 +1242,31 @@ void menuIniciarPartida() {
                 } break;
                 case 1: {
                     system("clear");
-                    cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-                    cout << longTab << "│           Desea Continuar la Partida?         │" << endl;
-                    cout << longTab << "├───────────────────────────────────────────────┤\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "│                   1. Aceptar                  │\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "│                   0. Cancelar                 │\n";
-                    cout << longTab << "│                                               │\n";
-                    cout << longTab << "└───────────────────────────────────────────────┘" << endl;
+                    cout << "\n"
+                    << longSpace << longTab << COLOR_BW << "       👤  Detalles Partida Individual      " << COLOR_RESET << endl;
+                    cout << longTab <<                     "────────────────────────────────────────────" << endl;
+                    cout << "\n" << longTab << "┌───────────────────────────────────────────┐" << endl;
+                    cout << longTab << "│        ¿Desea Continuar la Partida?       │" << endl;
+                    cout << longTab << "├───────────────────────────────────────────┤\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "│                 1. Aceptar                │\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "│                 0. Cancelar               │\n";
+                    cout << longTab << "│                                           │\n";
+                    cout << longTab << "└───────────────────────────────────────────┘" << endl;
                     cout << longTab << "❯ Opción: ";
                     cin >> cond2;
                     if (cond2 == 1) {
                         cont = true;
                     }
-                    cout << longTab << "♦ Ingrese la duracion de la partida: ";
+                    cout << "\n" << longTab << "♦ Ingrese la duracion de la partida: ";
                     cin >> dur;
                     icIniciarPartida->datoIndividual(cont, dur, cond);
                 } break;
             }
             system("clear");
             cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-            cout << longTab << "│             Desea Iniciar Partida?            │" << endl;
+            cout << longTab << "│            ¿Desea Iniciar Partida?            │" << endl;
             cout << longTab << "├───────────────────────────────────────────────┤\n";
             cout << longTab << "│                                               │\n";
             cout << longTab << "│                   1. Aceptar                  │\n";
@@ -1302,7 +1314,7 @@ void menuSuscribirseAVideojuego() {
         list<DtJuego *> listaDtActiva = icSuscribirseaVideojuego->listarLosJuegosConSub();
         if (listaDtActiva.size() > 0){
             cout << "\n"
-                << longTab << COLOR_BW << "      📢  Juegos con Suscripcion Activa       "
+                << longTab << COLOR_BW << "      ✅  Juegos con Suscripcion Activa       "
                 << COLOR_RESET << endl;
                 cout << longTab << "────────────────────────────────────────────" << endl;
             for (list<DtJuego *>::iterator it = listaDtActiva.begin(); it != listaDtActiva.end(); ++it) {
@@ -1311,7 +1323,7 @@ void menuSuscribirseAVideojuego() {
             }
         }else{
             cout << "\n"
-            << longTab << COLOR_BW << "      📢  Juegos con Suscripcion Activa       "
+            << longTab << COLOR_BW << "      ✅  Juegos con Suscripcion Activa       "
             << COLOR_RESET << endl;
             cout << longTab << "────────────────────────────────────────────" << endl;
             cout << "\n"
@@ -1321,8 +1333,8 @@ void menuSuscribirseAVideojuego() {
         }
         list<DtJuego *> listaDt = icSuscribirseaVideojuego->listarLosJuegosSinSub();
         if (listaDt.size() > 0){
-            cout << "\n\n"
-                << longTab << COLOR_BW << "      📢  Juegos sin Suscripcion Activa       "
+            cout << "\n"
+                << longTab << COLOR_BW << "      🚫  Juegos sin Suscripcion Activa       "
                 << COLOR_RESET << endl;
                 cout << longTab << "────────────────────────────────────────────" << endl;
             
@@ -1332,7 +1344,7 @@ void menuSuscribirseAVideojuego() {
             }
         }else{
             cout << "\n"
-                << longTab << COLOR_BW << "      📢  Juegos sin Suscripcion Activa       "
+                << longTab << COLOR_BW << "      🚫  Juegos sin Suscripcion Activa       "
                 << COLOR_RESET << endl;
                 cout << longTab << "────────────────────────────────────────────" << endl;
             cout << "\n"
@@ -1367,7 +1379,7 @@ void menuSuscribirseAVideojuego() {
                 }
                 system("clear");
                 cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-                cout << longTab << "│        Desea Suscribirse al Videojuego?       │" << endl;
+                cout << longTab << "│       ¿Desea Suscribirse al Videojuego?       │" << endl;
                 cout << longTab << "├───────────────────────────────────────────────┤\n";
                 cout << longTab << "│                                               │\n";
                 cout << longTab << "│                   1. Aceptar                  │\n";
@@ -1471,7 +1483,7 @@ void menuEliminarVideojuego() {
             icEliminarVideojuego->seleccionarJuego(nombre);
             system("clear");
             cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-            cout << longTab << "│          Desea Eliminar el Videojuego?        │" << endl;
+            cout << longTab << "│         ¿Desea Eliminar el Videojuego?        │" << endl;
             cout << longTab << "├───────────────────────────────────────────────┤\n";
             cout << longTab << "│                                               │\n";
             cout << longTab << "│                   1. Aceptar                  │\n";
@@ -1579,7 +1591,7 @@ void menuCancelarSuscripcion() {
     string nombre;
     list<DtJuego *> listaDtActiva = icSuscribirseaVideojuego->listarLosJuegosConSub();
     if (listaDtActiva.size() > 0) {
-        cout << "\n" << longTab << COLOR_BW << "  📢  Videojuegos con Suscripcion Activa  " << COLOR_RESET << endl;
+        cout << "\n" << longTab << COLOR_BW << "  ✅  Videojuegos con Suscripcion Activa  " << COLOR_RESET << endl;
         cout << longTab << "────────────────────────────────────────────" << endl;
         for (list<DtJuego *>::iterator it = listaDtActiva.begin(); it != listaDtActiva.end(); ++it) {
             (*it)->imprimirNombre();
@@ -1621,7 +1633,7 @@ void menuBuscarPorCategoria() {
     list<DtCategoria *> listaDt = icAgregarCategoria->listarDtCategorias();
     if (listaDt.size() > 0) {
         cout << "\n"
-             << longTab << COLOR_BW << "  📢 Estas son las categorias del sistema  "
+             << longTab << COLOR_BW << "          📢 Categorias del Sistema  "
              << COLOR_RESET << endl;
              cout << longTab << "────────────────────────────────────────────" << endl;
         for (list<DtCategoria *>::iterator it = listaDt.begin(); it != listaDt.end(); ++it) {
@@ -1644,12 +1656,15 @@ void menuBuscarPorCategoria() {
             pressEnter();
             system("clear");
         }else{
-            cout << "no existe esa categoria" << endl;
+            cout << "\n"
+             << longTab << COLOR_R << "┌───────────────────────────────┐" << endl;
+            cout << longTab << "│  ⛔ No Existe esa Categoria   │" << endl;
+            cout << longTab << "└───────────────────────────────┘" << COLOR_RESET << endl;
         }
     } else {
         cout << "\n"
              << longTab << COLOR_R << "┌───────────────────────────────────────────┐" << endl;
-        cout << longTab << "│  ⛔ No Existen categorias en el sistema   │" << endl;
+        cout << longTab << "│  ⛔ No Existen Categorias en el Sistema   │" << endl;
         cout << longTab << "└───────────────────────────────────────────┘" << COLOR_RESET << endl;
         system("sleep 2.5");
         system("clear");
@@ -1750,7 +1765,7 @@ void menuVerPartidas() {
                     DtPartidaIndi *pI = dynamic_cast<DtPartidaIndi *>((*it));
                     if (pI != NULL) {
                         cout << "\n"
-                        << longTab << COLOR_BW << "      📢  Detalles Partida Individual       "
+                        << longTab << COLOR_BW << "      👤  Detalles Partida Individual       "
                         << COLOR_RESET << endl;
                         cout << longTab << "────────────────────────────────────────────" << endl;
                         pI->imprimirIndi();
@@ -1759,7 +1774,7 @@ void menuVerPartidas() {
                         DtPartidaMulti *pM = dynamic_cast<DtPartidaMulti *>((*it));
                         if (pM != NULL) {
                             cout << "\n"
-                            << longTab << COLOR_BW << "      📢  Detalles Partida Multijugador     "
+                            << longTab << COLOR_BW << "      👥  Detalles Partida Multijugador     "
                             << COLOR_RESET << endl;
                             cout << longTab << "────────────────────────────────────────────" << endl;
                             pM->imprimirMulti();
@@ -1772,16 +1787,16 @@ void menuVerPartidas() {
             }else{
                 cout << "\n"
                  << longTab << COLOR_R << "┌────────────────────────────────┐" << endl;
-            cout << longTab << "│   ⛔ No hay partidas asocidas  │" << endl;
+            cout << longTab << "│   ⛔ No hay Partidas Asocidas  │" << endl;
             cout << longTab << "└────────────────────────────────┘" << COLOR_RESET << endl;
             system("sleep 2.5");
             system("clear");
             }
         } else {
             cout << "\n"
-                 << longTab << COLOR_R << "┌────────────────────────────────┐" << endl;
-            cout << longTab << "│   ⛔ No existe el videojuego   │" << endl;
-            cout << longTab << "└────────────────────────────────┘" << COLOR_RESET << endl;
+                 << longTab << COLOR_R << "┌─────────────────────────────────┐" << endl;
+            cout << longTab << "│   ⛔ No Existe ese Videojuego   │" << endl;
+            cout << longTab << "└─────────────────────────────────┘" << COLOR_RESET << endl;
             system("sleep 2.5");
             system("clear");
         }
