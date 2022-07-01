@@ -1467,29 +1467,38 @@ void menuEliminarVideojuego() {
         cout << "\n"
              << longTab << "♦ Ingrese el nombre del Videojuego: ";
         cin >> nombre;
-        icEliminarVideojuego->seleccionarJuego(nombre);
-        system("clear");
-        cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
-        cout << longTab << "│          Desea Eliminar el Videojuego?        │" << endl;
-        cout << longTab << "├───────────────────────────────────────────────┤\n";
-        cout << longTab << "│                                               │\n";
-        cout << longTab << "│                   1. Aceptar                  │\n";
-        cout << longTab << "│                                               │\n";
-        cout << longTab << "│                   0. Cancelar                 │\n";
-        cout << longTab << "│                                               │\n";
-        cout << longTab << "└───────────────────────────────────────────────┘" << endl;
-        cout << longTab << "❯ Opción: ";
-        cin >> cond;
-        switch (cond) {
-            case '1': {
-                icEliminarVideojuego->eliminarVideojuego();
-                DoneMessage();
-            } break;
-            case '0': {
-                icEliminarVideojuego->cancelar();
-                system("clear");
-            } break;
+        if (icSuscribirseaVideojuego->ingresarNombre(nombre)){
+            icEliminarVideojuego->seleccionarJuego(nombre);
+            system("clear");
+            cout << longSpace << longTab << "┌───────────────────────────────────────────────┐" << endl;
+            cout << longTab << "│          Desea Eliminar el Videojuego?        │" << endl;
+            cout << longTab << "├───────────────────────────────────────────────┤\n";
+            cout << longTab << "│                                               │\n";
+            cout << longTab << "│                   1. Aceptar                  │\n";
+            cout << longTab << "│                                               │\n";
+            cout << longTab << "│                   0. Cancelar                 │\n";
+            cout << longTab << "│                                               │\n";
+            cout << longTab << "└───────────────────────────────────────────────┘" << endl;
+            cout << longTab << "❯ Opción: ";
+            cin >> cond;
+            switch (cond) {
+                case '1': {
+                    icEliminarVideojuego->eliminarVideojuego();
+                    DoneMessage();
+                } break;
+                case '0': {
+                    icEliminarVideojuego->cancelar();
+                    system("clear");
+                } break;
+            }
+        }else{
+            cout << "\n"
+                 << longTab << COLOR_R << "┌────────────────────────────────┐" << endl;
+            cout << longTab << "│  ⛔ No Existe ese Videojuego   │" << endl;
+            cout << longTab << "└────────────────────────────────┘" << COLOR_RESET << endl;
+            system("sleep 2.5");
         }
+        
     } else {
         WarningMessage();
     }
@@ -1896,7 +1905,7 @@ bool menuDev() {
         statusBar();
         cout << longTab << "╔══════════════════════════════════════════════╗" << endl;
         cout << longTab << COLOR_SB << "║              ♦ MENU PRINCIPAL ♦              ║" << COLOR_RESET << endl;
-        cout << longTab << COLOR_SB << "║                  [Developer]                 ║" << COLOR_RESET << endl;
+        cout << longTab << COLOR_SB << "║                 [Developer]                  ║" << COLOR_RESET << endl;
         cout << longTab << "╠══════════════════════════════════════════════╣\n";
         cout << longTab << "║                                              ║\n";
         cout << longTab << "║     1) 🔴 Cerrar Sesion                      ║\n";
